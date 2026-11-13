@@ -39,30 +39,28 @@ REFFP = {
     "TP5": "TestPoint_Pad_1.0x1.0mm", "TP6": "TestPoint_Pad_1.0x1.0mm",
     "FID1": "Fiducial_Align_1.5mm", "FID2": "Fiducial_Align_1.5mm", "FID3": "Fiducial_Align_1.5mm",
 }
-# placement by body centre, in board-centre-relative mm: (dx, dy, rot, back_side)
+# All components on the FRONT face (single-sided etch for parts). The NFC coil is
+# the front tap surface; the Ø45 LiPo and a 0.1 mm ferrite film sit BEHIND the
+# board (the ferrite between coil and battery keeps NFC working). BT1 is just the
+# two solder pads for the battery wires.
+# Placement by body centre, board-centre-relative mm: (dx, dy, rot, back_side).
 # +x right, +y down. Centre of board is (0,0).
 PLACE = {
-    "AE1": (0, -1, 60, False),
-    "U1": (0, -1, 0, False),
-    "U2": (0, 15, 0, False),
-    "C5": (5.5, 13, 0, False),
-    "C1": (-14.1, -5.13, 0, True),
-    "C2": (-14.1, 5.13, 0, True),
-    "C3": (-9.83, -6.88, 0, True),
-    "C4": (9.83, -6.88, 0, True),
-    "SW1": (-18.0, 0.0, 0, True),
-    "SW3": (17.5, 0.0, 90, True),
-    "J5": (-0.0, -17.0, 0, True),
-    "BT1": (0.0, 16.0, 0, True),
-    "TP1": (-18.13, -8.45, 0, True),
-    "TP2": (-14.14, -14.14, 0, True),
-    "TP3": (18.13, -8.45, 0, True),
-    "TP4": (14.14, -14.14, 0, True),
-    "TP5": (-6.84, -18.79, 0, True),
-    "TP6": (6.84, -18.79, 0, True),
-    "FID1": (-18.19, 10.5, 0, False),
-    "FID2": (18.19, 10.5, 0, False),
-    "FID3": (0.0, -21.0, 0, False),
+    "AE1": (0, -1, 60, False),      # round NFC coil under the XIAO (feed -> NFC pads)
+    "U1":  (0, -1, 0, False),       # XIAO, centre
+    "U2":  (0, 15, 0, False),       # Wio-SX1262 at the bottom edge, IPEX to the rim
+    "C5":  (6.0, 12.5, 0, False),   # Wio VCC decoupling
+    "C1":  (-11.28, -4.1, 0, False), "C2": (-11.28, 4.1, 0, False),  # 3V3 decoupling
+    "C3":  (-6, 6, 0, False), "C4": (6, 6, 0, False),                # NFC tuning
+    "SW1": (-12.73, -12.73, 0, False),   # user button (top-left)
+    "SW3": (12.73, -12.73, 0, False),    # battery slide switch (top-right)
+    "J5":  (0, -19.5, 0, False),         # pogo charge/USB pads at the top rim
+    "BT1": (0, -11, 0, False),           # LiPo wire pads (battery body is behind)
+    "TP1": (-11.13, -17.81, 0, False), "TP2": (-7.35, -20.2, 0, False),  # RST / SWDIO
+    "TP3": (7.35, -20.2, 0, False),  "TP4": (11.13, -17.81, 0, False),   # SWCLK / GND
+    "TP5": (-17.15, -6.93, 0, False), "TP6": (17.15, -6.93, 0, False),    # USB D+/D-
+    "FID1": (-19.05, 11.0, 0, False), "FID2": (19.05, 11.0, 0, False),
+    "FID3": (-0.79, -22.49, 0, False),
 }
 
 

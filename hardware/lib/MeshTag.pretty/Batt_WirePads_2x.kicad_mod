@@ -1,7 +1,7 @@
 (footprint "Batt_WirePads_2x"
   (version 20240108) (generator "meshtag")
   (layer "F.Cu")
-  (descr "Two solder pads for LiPo wire leads (BAT+/BAT-)")
+  (descr "Two solder pads for the LiPo wire leads (BAT+/BAT-). Battery body + 0.1mm ferrite sit behind the board in the enclosure, not on the PCB.")
   (attr smd exclude_from_pos_files)
   (property "Reference" "BT" (at 0 -3 0) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.15))))
   (property "Value" "LiPo_1S" (at 0 3 0) (layer "F.Fab") (effects (font (size 0.8 0.8) (thickness 0.15))))
@@ -13,8 +13,4 @@
   (pad "1" smd roundrect (at -1.8 0) (size 1.6 2.4) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.2) (uuid "bp1"))
   (pad "2" smd roundrect (at 1.8 0) (size 1.6 2.4) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.2) (uuid "bp2"))
   (embedded_fonts no)
-  (model "${KIPRJMOD}/lib/3dmodels/Batt_WirePads_2x.step"
-    (offset (xyz 0 0 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0)))
 )

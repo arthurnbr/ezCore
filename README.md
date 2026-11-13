@@ -115,10 +115,27 @@ Bobine **ronde** 6 tours/couche (Ø15 mm), ~1,5–2 µH estimés, centrée sous 
 choisis entre 33 et 150 pF (C0G 0402) pour résonner à 13,56 MHz — procédure
 standard (wiki Seeed XIAO NFC).
 
-## Alimentation et charge
+## Alimentation, charge et empilage (stack)
 
-- **Batterie** : LPR604543 ronde Ø45 × 6 mm, 1050 mAh, PCM (fils soudés sur les
-  pastilles `BT1` BAT+/BAT−). Le chargeur BQ25101 du XIAO charge à 50/100 mA.
+**Tous les composants sont sur la face AVANT** (gravure simple face pour les
+pièces). La face avant porte aussi la **bobine NFC** (surface de tap). La
+**batterie occupe seule l'arrière**, dans le boîtier.
+
+```
+[ téléphone ]
+  bobine NFC          face AVANT du PCB (cuivre vers le téléphone)
+  PCB  (XIAO, Wio, pogo, switch, bouton, caps, TP sur l'avant)
+  --- film ferrite 0,1 mm ---   <-- indispensable pour le NFC
+  BATTERIE Ø45 1050 mAh         collée au dos, dans le boîtier
+[ dos du boîtier ]
+```
+
+- **Batterie** : LPR604543 ronde Ø45 × 6 mm, 1050 mAh, PCM ; fils soudés sur les
+  pastilles `BT1` (BAT+/BAT−). Elle n'a **pas** de modèle 3D sur la PCB (ce n'est
+  pas un composant CMS). Le chargeur BQ25101 du XIAO charge à 50/100 mA.
+- **Film ferrite 0,1 mm** entre la bobine et la batterie : **obligatoire**. Le PCB
+  (FR4) est transparent au champ magnétique et ne protège pas ; sans ferrite,
+  l'enveloppe aluminium de la batterie absorbe le champ et tue le NFC. ~2 €.
 - **Port pogo `J5`** (VBUS/GND/D+/D−) : charge + flash UF2 + série USB.
 - **USB-C du XIAO** non exposé ; dessoudage optionnel pour gagner de la hauteur.
   Les pogo D+/D− se câblent alors sur les pads USB du XIAO (`TP5`/`TP6`).
