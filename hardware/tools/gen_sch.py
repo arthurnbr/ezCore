@@ -69,10 +69,10 @@ def grab_lib(name):
 ROWS = [
     # ---- MCU (centre) ----
     ("U1", "XIAO-nRF52840-SMD", 150, 110, {
-        "1": "BTN", "2": "LORA_DIO1", "3": "LORA_RST", "4": "LORA_BUSY",
-        "5": "LORA_NSS", "6": "LORA_RXEN", "7": "LED_R_G", "8": "LED_G_G",
-        "9": "SPI_SCK", "10": "SPI_MISO",
-        "11": "SPI_MOSI", "12": "+3V3", "13": "GND", "14": "VBUS",
+        "1": "LORA_NSS", "2": "LORA_RST", "3": "SPI_SCK", "4": "SPI_MOSI",
+        "5": "SPI_MISO", "6": "LORA_RXEN", "7": "LORA_BUSY", "8": "LED_R_G",
+        "9": "LED_G_G", "10": "BTN",
+        "11": "LORA_DIO1", "12": "+3V3", "13": "GND", "14": "VBUS",
         "19": "VBATT", "20": "GND", "21": "NFC1", "22": "NFC2",
         "15": "SWDIO", "16": "SWCLK", "17": "RST_MCU", "18": "GND"}),
     # ---- RADIO (right of MCU) ----

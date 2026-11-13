@@ -16,7 +16,7 @@ Placement pensé usage, carte propre et symétrique :
 - **Pogo `J5` en haut** (VBUS/GND/D+/D−) : charge + flash UF2 + série USB.
 - **Bouton `SW1` + LED bi-couleur `D1`/`D2` à gauche** (90° du pogo) : retour
   visuel type AirPods (rouge = charge, vert = prêt, orange = transition). Pilotée
-  par D6/D7 du XIAO via `R1`/`R2` (série).
+  par D7/D8 du XIAO via `R1`/`R2` (série).
 - **Ports de debug SWD `TP1-TP4` sous le bouton** (RST / SWDIO / SWCLK / GND).
 - **Interrupteur ON/OFF `SW3` à droite** (coupe la batterie).
 - **XIAO `U1` + bobine NFC + Wio `U2` au centre**, pour un routage court.
@@ -98,19 +98,24 @@ Dépendances : KiCad 9 (`kicad-cli`, module `pcbnew`), Freerouting 2.5
 
 ## Architecture électrique
 
-Brochage LoRa identique à la variante MeshCore `xiao_nrf52` (pour ne pas toucher
-au firmware) :
+Brochage choisi pour le routage (XIAO pads 1→7 en face des broches Wio
+6,5,4,3,2,1,11). **Diffère de la variante MeshCore `xiao_nrf52`** : il faut un env
+PlatformIO dédié (flags `P_LORA_*`, `SX126X_RXEN`, `PIN_USER_BTN`, `P_LORA_TX_LED`,
+I2C désactivé) et une copie de `variant.h` (`PIN_SPI_*` y sont codés en dur).
 
-| Signal Wio-SX1262 | Broche XIAO | Net        |
-|-------------------|-------------|------------|
-| NSS               | D4          | LORA_NSS   |
-| DIO1              | D1          | LORA_DIO1  |
-| NRST              | D2          | LORA_RST   |
-| BUSY              | D3          | LORA_BUSY  |
-| RF_SW / RXEN      | D5          | LORA_RXEN  |
-| SCK / MISO / MOSI | D8 / D9 / D10 | SPI_*    |
-| LED rouge         | D6          | via R1     |
-| LED verte         | D7          | via R2     |
+| Signal          | Broche Wio | Pad XIAO | Broche XIAO | GPIO nRF | Net       |
+|-----------------|------------|----------|-------------|----------|-----------|
+| NSS             | 6          | 1        | D0          | P0.02    | LORA_NSS  |
+| NRST            | 5          | 2        | D1          | P0.03    | LORA_RST  |
+| SCK             | 4          | 3        | D2          | P0.28    | SPI_SCK   |
+| MOSI            | 3          | 4        | D3          | P0.29    | SPI_MOSI  |
+| MISO            | 2          | 5        | D4          | P0.04    | SPI_MISO  |
+| RF_SW / RXEN    | 1          | 6        | D5          | P0.05    | LORA_RXEN |
+| BUSY            | 11         | 7        | D6          | P1.11    | LORA_BUSY |
+| DIO1            | 12         | 11       | D10         | P1.15    | LORA_DIO1 |
+| LED rouge       | —          | 8        | D7          | P1.12    | via R1    |
+| LED verte       | —          | 9        | D8          | P1.13    | via R2    |
+| Bouton `SW1`    | —          | 10       | D9          | P1.14    | BTN       |
 
 - **U1** XIAO nRF52840 (CMS à plat, castellations), face avant.
 - **U2** module Wio-SX1262 nu (IPEX), face avant, au-dessus du XIAO.

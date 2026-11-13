@@ -1,588 +1,2349 @@
-(export (version "E")
-  (design
-    (source "/home/arthur/Documents/meshtag/hardware/MeshTag.kicad_sch")
-    (date "2026-11-13T17:20:40+0100")
-    (tool "Eeschema 9.0.2+dfsg-1")
-    (sheet (number "1") (name "/") (tstamps "/")
-      (title_block
-        (title)
-        (company)
-        (rev)
-        (date)
-        (source "MeshTag.kicad_sch")
-        (comment (number "1") (value ""))
-        (comment (number "2") (value ""))
-        (comment (number "3") (value ""))
-        (comment (number "4") (value ""))
-        (comment (number "5") (value ""))
-        (comment (number "6") (value ""))
-        (comment (number "7") (value ""))
-        (comment (number "8") (value ""))
-        (comment (number "9") (value "")))))
-  (components
-    (comp (ref "AE1")
-      (value "NFC_Coil_Round")
-      (footprint "MeshTag:NFC_Coil_Round")
-      (fields
-        (field (name "Footprint") "MeshTag:NFC_Coil_Round")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "NFC_Coil_Round") (description "Round 2-layer PCB NFC antenna"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "fc76a55f-7cdb-46f8-a6f0-778420218b28"))
-    (comp (ref "BT1")
-      (value "LiPo_1S")
-      (footprint "MeshTag:Batt_WirePads_2x")
-      (fields
-        (field (name "Footprint") "MeshTag:Batt_WirePads_2x")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "LiPo_1S") (description "1S LiPo pouch + PCM"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "6605f85a-39e2-47d8-b1c2-298810651a51"))
-    (comp (ref "C1")
-      (value "C")
-      (footprint "MeshTag:C_0402_1005Metric")
-      (fields
-        (field (name "Footprint") "MeshTag:C_0402_1005Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "C") (description "Unpolarized capacitor"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "cap capacitor"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "21254cb5-386f-4daa-aa86-06952ae1a859"))
-    (comp (ref "C2")
-      (value "C")
-      (footprint "MeshTag:C_0402_1005Metric")
-      (fields
-        (field (name "Footprint") "MeshTag:C_0402_1005Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "C") (description "Unpolarized capacitor"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "cap capacitor"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "223f19a6-59a1-44d4-8dc8-c682c409164e"))
-    (comp (ref "C3")
-      (value "C")
-      (footprint "MeshTag:C_0402_1005Metric")
-      (fields
-        (field (name "Footprint") "MeshTag:C_0402_1005Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "C") (description "Unpolarized capacitor"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "cap capacitor"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "975d195c-e9d8-459a-95a4-70ea7fcf4f4e"))
-    (comp (ref "C4")
-      (value "C")
-      (footprint "MeshTag:C_0402_1005Metric")
-      (fields
-        (field (name "Footprint") "MeshTag:C_0402_1005Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "C") (description "Unpolarized capacitor"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "cap capacitor"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "2d63fe9b-e728-4307-b5b1-ab8daa600353"))
-    (comp (ref "C5")
-      (value "C")
-      (footprint "MeshTag:C_0402_1005Metric")
-      (fields
-        (field (name "Footprint") "MeshTag:C_0402_1005Metric")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "C") (description "Unpolarized capacitor"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "cap capacitor"))
-      (property (name "ki_fp_filters") (value "C_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "8f9cf530-6bfc-4682-88aa-7a840083e3be"))
-    (comp (ref "D1")
-      (value "LED")
-      (footprint "MeshTag:LED_0402")
-      (fields
-        (field (name "Footprint") "MeshTag:LED_0402")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "LED") (description "Light emitting diode"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "LED diode"))
-      (property (name "ki_fp_filters") (value "LED* LED_SMD:* LED_THT:*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "959907eb-c86b-41da-87be-533cf6b16eca"))
-    (comp (ref "D2")
-      (value "LED")
-      (footprint "MeshTag:LED_0402")
-      (fields
-        (field (name "Footprint") "MeshTag:LED_0402")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "LED") (description "Light emitting diode"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "LED diode"))
-      (property (name "ki_fp_filters") (value "LED* LED_SMD:* LED_THT:*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "d6d6bde8-c595-48d8-b3ae-ea4dafbb9c22"))
-    (comp (ref "J5")
-      (value "Pogo_4P")
-      (footprint "MeshTag:Pogo_4P_2.54mm")
-      (fields
-        (field (name "Footprint") "MeshTag:Pogo_4P_2.54mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "Pogo_4P") (description "4-pin pogo charge+USB"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "05b240c5-8b66-4242-a6ce-220f7c4441f3"))
-    (comp (ref "R1")
-      (value "R")
-      (footprint "MeshTag:R_0402")
-      (fields
-        (field (name "Footprint") "MeshTag:R_0402")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "R") (description "Resistor"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "R res resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "42cdb672-e980-4984-8e2a-6bb8dc1059a6"))
-    (comp (ref "R2")
-      (value "R")
-      (footprint "MeshTag:R_0402")
-      (fields
-        (field (name "Footprint") "MeshTag:R_0402")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "R") (description "Resistor"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "R res resistor"))
-      (property (name "ki_fp_filters") (value "R_*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "938d38b8-2555-4eb6-907f-7a636ec462ae"))
-    (comp (ref "SW1")
-      (value "SW_Push")
-      (footprint "MeshTag:SW_Push_1P1T_NO_CK_KMR2")
-      (fields
-        (field (name "Footprint") "MeshTag:SW_Push_1P1T_NO_CK_KMR2")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "SW_Push") (description "Push button switch, generic, two pins"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "switch normally-open pushbutton push-button"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "8cbf8d92-5770-49e7-a216-a645edbc3ab2"))
-    (comp (ref "SW3")
-      (value "SW_SPDT")
-      (footprint "MeshTag:SW_SPDT_PCM12")
-      (fields
-        (field (name "Footprint") "MeshTag:SW_SPDT_PCM12")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "SW_SPDT") (description "Switch, single pole double throw"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "switch single-pole double-throw spdt ON-ON"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "2f00729d-922b-4a5d-8f0b-d0994ab6e261"))
-    (comp (ref "TP1")
-      (value "TestPoint")
-      (footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
-      (fields
-        (field (name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "TestPoint") (description "test point"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "a4ede81b-60fc-4e3c-bc90-1b3a347d36fe"))
-    (comp (ref "TP2")
-      (value "TestPoint")
-      (footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
-      (fields
-        (field (name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "TestPoint") (description "test point"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "30d263d0-a56b-4952-8efe-7648576f2eb0"))
-    (comp (ref "TP3")
-      (value "TestPoint")
-      (footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
-      (fields
-        (field (name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "TestPoint") (description "test point"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "4ca058a3-4956-4163-a451-5a6c787a8e74"))
-    (comp (ref "TP4")
-      (value "TestPoint")
-      (footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
-      (fields
-        (field (name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "TestPoint") (description "test point"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "7d2a8307-4538-4a02-b17b-f892b170eb33"))
-    (comp (ref "TP5")
-      (value "TestPoint")
-      (footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
-      (fields
-        (field (name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "TestPoint") (description "test point"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "092772ff-e070-4c1f-938b-60907307e114"))
-    (comp (ref "TP6")
-      (value "TestPoint")
-      (footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
-      (fields
-        (field (name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "TestPoint") (description "test point"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (property (name "ki_keywords") (value "test point tp"))
-      (property (name "ki_fp_filters") (value "Pin* Test*"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "2bd0cc2c-7782-4576-bdd9-27e66ed9bc8d"))
-    (comp (ref "U1")
-      (value "XIAO-nRF52840-SMD")
-      (footprint "MeshTag:XIAO-nRF52840-SMD")
-      (fields
-        (field (name "Footprint") "MeshTag:XIAO-nRF52840-SMD")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "XIAO-nRF52840-SMD") (description "Seeed XIAO nRF52840 (castellated SMD)"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "2705ab7d-9a6c-4bed-b612-a2c2387ba6ce"))
-    (comp (ref "U2")
-      (value "Wio-SX1262")
-      (footprint "MeshTag:Wio-SX1262-Module")
-      (fields
-        (field (name "Footprint") "MeshTag:Wio-SX1262-Module")
-        (field (name "Datasheet"))
-        (field (name "Description")))
-      (libsource (lib "MeshTag") (part "Wio-SX1262") (description "Seeed Wio-SX1262 LoRa module"))
-      (property (name "Sheetname") (value ""))
-      (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
-      (sheetpath (names "/") (tstamps "/"))
-      (tstamps "54e76e86-b768-4594-90bc-a5e8891da6f0")))
-  (libparts
-    (libpart (lib "MeshTag") (part "C")
-      (description "Unpolarized capacitor")
-      (docs "~")
-      (footprints
-        (fp "C_*"))
-      (fields
-        (field (name "Reference") "C")
-        (field (name "Value") "C")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Unpolarized capacitor"))
-      (pins
-        (pin (num "1") (name "") (type "passive"))
-        (pin (num "2") (name "") (type "passive"))))
-    (libpart (lib "MeshTag") (part "LED")
-      (description "Light emitting diode")
-      (docs "~")
-      (footprints
-        (fp "LED*")
-        (fp "LED_SMD:*")
-        (fp "LED_THT:*"))
-      (fields
-        (field (name "Reference") "D")
-        (field (name "Value") "LED")
-        (field (name "Footprint") "MeshTag:LED_0603")
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Light emitting diode")
-        (field (name "Sim.Pins") "1=K 2=A"))
-      (pins
-        (pin (num "1") (name "K") (type "passive"))
-        (pin (num "2") (name "A") (type "passive"))))
-    (libpart (lib "MeshTag") (part "LiPo_1S")
-      (description "1S LiPo pouch + PCM")
-      (fields
-        (field (name "Reference") "BT")
-        (field (name "Value") "LiPo_1S")
-        (field (name "Footprint") "MeshTag:Batt_WirePads_2x")
-        (field (name "Datasheet"))
-        (field (name "Description") "1S LiPo pouch + PCM"))
-      (pins
-        (pin (num "1") (name "+") (type "passive"))
-        (pin (num "2") (name "-") (type "passive"))))
-    (libpart (lib "MeshTag") (part "NFC_Coil_Round")
-      (description "Round 2-layer PCB NFC antenna")
-      (fields
-        (field (name "Reference") "AE")
-        (field (name "Value") "NFC_Coil_Round")
-        (field (name "Footprint") "MeshTag:NFC_Coil_Round")
-        (field (name "Datasheet"))
-        (field (name "Description") "Round 2-layer PCB NFC antenna"))
-      (pins
-        (pin (num "1") (name "1") (type "passive"))
-        (pin (num "2") (name "2") (type "passive"))))
-    (libpart (lib "MeshTag") (part "Pogo_4P")
-      (description "4-pin pogo charge+USB")
-      (fields
-        (field (name "Reference") "J")
-        (field (name "Value") "Pogo_4P")
-        (field (name "Footprint") "MeshTag:Pogo_4P_2.54mm")
-        (field (name "Datasheet"))
-        (field (name "Description") "4-pin pogo charge+USB"))
-      (pins
-        (pin (num "1") (name "VBUS") (type "passive"))
-        (pin (num "2") (name "GND") (type "passive"))
-        (pin (num "3") (name "D+") (type "passive"))
-        (pin (num "4") (name "D-") (type "passive"))))
-    (libpart (lib "MeshTag") (part "R")
-      (description "Resistor")
-      (docs "~")
-      (footprints
-        (fp "R_*"))
-      (fields
-        (field (name "Reference") "R")
-        (field (name "Value") "R")
-        (field (name "Footprint") "MeshTag:R_0603")
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Resistor"))
-      (pins
-        (pin (num "1") (name "") (type "passive"))
-        (pin (num "2") (name "") (type "passive"))))
-    (libpart (lib "MeshTag") (part "SW_Push")
-      (description "Push button switch, generic, two pins")
-      (docs "~")
-      (fields
-        (field (name "Reference") "SW")
-        (field (name "Value") "SW_Push")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Push button switch, generic, two pins"))
-      (pins
-        (pin (num "1") (name "1") (type "passive"))
-        (pin (num "2") (name "2") (type "passive"))))
-    (libpart (lib "MeshTag") (part "SW_SPDT")
-      (description "Switch, single pole double throw")
-      (docs "~")
-      (fields
-        (field (name "Reference") "SW")
-        (field (name "Value") "SW_SPDT")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "Switch, single pole double throw"))
-      (pins
-        (pin (num "1") (name "A") (type "passive"))
-        (pin (num "2") (name "B") (type "passive"))
-        (pin (num "3") (name "C") (type "passive"))))
-    (libpart (lib "MeshTag") (part "TestPoint")
-      (description "test point")
-      (docs "~")
-      (footprints
-        (fp "Pin*")
-        (fp "Test*"))
-      (fields
-        (field (name "Reference") "TP")
-        (field (name "Value") "TestPoint")
-        (field (name "Footprint"))
-        (field (name "Datasheet") "~")
-        (field (name "Description") "test point"))
-      (pins
-        (pin (num "1") (name "1") (type "passive"))))
-    (libpart (lib "MeshTag") (part "Wio-SX1262")
-      (description "Seeed Wio-SX1262 LoRa module")
-      (fields
-        (field (name "Reference") "U")
-        (field (name "Value") "Wio-SX1262")
-        (field (name "Footprint") "MeshTag:Wio-SX1262-Module")
-        (field (name "Datasheet"))
-        (field (name "Description") "Seeed Wio-SX1262 LoRa module"))
-      (pins
-        (pin (num "1") (name "RF_SW") (type "passive"))
-        (pin (num "2") (name "MISO") (type "passive"))
-        (pin (num "3") (name "MOSI") (type "passive"))
-        (pin (num "4") (name "SCK") (type "passive"))
-        (pin (num "5") (name "NRST") (type "passive"))
-        (pin (num "6") (name "NSS") (type "passive"))
-        (pin (num "7") (name "GND") (type "passive"))
-        (pin (num "8") (name "VCC") (type "passive"))
-        (pin (num "9") (name "ANT") (type "passive"))
-        (pin (num "10") (name "GND") (type "passive"))
-        (pin (num "11") (name "BUSY") (type "passive"))
-        (pin (num "12") (name "DIO1") (type "passive"))))
-    (libpart (lib "MeshTag") (part "XIAO-nRF52840-SMD")
-      (description "Seeed XIAO nRF52840 (castellated SMD)")
-      (fields
-        (field (name "Reference") "U")
-        (field (name "Value") "XIAO-nRF52840")
-        (field (name "Footprint") "MeshTag:XIAO-nRF52840-SMD")
-        (field (name "Datasheet"))
-        (field (name "Description") "Seeed XIAO nRF52840 (castellated SMD)"))
-      (pins
-        (pin (num "1") (name "D0") (type "passive"))
-        (pin (num "2") (name "D1") (type "passive"))
-        (pin (num "3") (name "D2") (type "passive"))
-        (pin (num "4") (name "D3") (type "passive"))
-        (pin (num "5") (name "D4") (type "passive"))
-        (pin (num "6") (name "D5") (type "passive"))
-        (pin (num "7") (name "D6") (type "passive"))
-        (pin (num "8") (name "D7") (type "passive"))
-        (pin (num "9") (name "D8") (type "passive"))
-        (pin (num "10") (name "D9") (type "passive"))
-        (pin (num "11") (name "D10") (type "passive"))
-        (pin (num "12") (name "3V3_OUT") (type "passive"))
-        (pin (num "13") (name "GND") (type "passive"))
-        (pin (num "14") (name "VBUS") (type "passive"))
-        (pin (num "15") (name "SWDIO") (type "passive"))
-        (pin (num "16") (name "SWCLK") (type "passive"))
-        (pin (num "17") (name "EN") (type "passive"))
-        (pin (num "18") (name "GND") (type "passive"))
-        (pin (num "19") (name "VBAT") (type "passive"))
-        (pin (num "20") (name "GND") (type "passive"))
-        (pin (num "21") (name "NFC1") (type "passive"))
-        (pin (num "22") (name "NFC2") (type "passive")))))
-  (libraries
-    (library (logical "MeshTag")
-      (uri "/home/arthur/Documents/meshtag/hardware/lib/MeshTag.kicad_sym")))
-  (nets
-    (net (code "1") (name "+3V3") (class "Default")
-      (node (ref "C1") (pin "1") (pintype "passive"))
-      (node (ref "C2") (pin "1") (pintype "passive"))
-      (node (ref "C5") (pin "1") (pintype "passive"))
-      (node (ref "U1") (pin "12") (pinfunction "3V3_OUT") (pintype "passive"))
-      (node (ref "U2") (pin "8") (pinfunction "VCC") (pintype "passive")))
-    (net (code "2") (name "BAT_P") (class "Default")
-      (node (ref "BT1") (pin "1") (pinfunction "+") (pintype "passive"))
-      (node (ref "SW3") (pin "3") (pinfunction "C") (pintype "passive")))
-    (net (code "3") (name "BTN") (class "Default")
-      (node (ref "SW1") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "U1") (pin "1") (pinfunction "D0") (pintype "passive")))
-    (net (code "4") (name "GND") (class "Default")
-      (node (ref "BT1") (pin "2") (pinfunction "-") (pintype "passive"))
-      (node (ref "C1") (pin "2") (pintype "passive"))
-      (node (ref "C2") (pin "2") (pintype "passive"))
-      (node (ref "C3") (pin "2") (pintype "passive"))
-      (node (ref "C4") (pin "2") (pintype "passive"))
-      (node (ref "C5") (pin "2") (pintype "passive"))
-      (node (ref "D1") (pin "1") (pinfunction "K") (pintype "passive"))
-      (node (ref "D2") (pin "1") (pinfunction "K") (pintype "passive"))
-      (node (ref "J5") (pin "2") (pinfunction "GND") (pintype "passive"))
-      (node (ref "SW1") (pin "2") (pinfunction "2") (pintype "passive"))
-      (node (ref "TP4") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "U1") (pin "13") (pinfunction "GND") (pintype "passive"))
-      (node (ref "U1") (pin "18") (pinfunction "GND") (pintype "passive"))
-      (node (ref "U1") (pin "20") (pinfunction "GND") (pintype "passive"))
-      (node (ref "U2") (pin "10") (pinfunction "GND") (pintype "passive"))
-      (node (ref "U2") (pin "7") (pinfunction "GND") (pintype "passive")))
-    (net (code "5") (name "LED_G_A") (class "Default")
-      (node (ref "D2") (pin "2") (pinfunction "A") (pintype "passive"))
-      (node (ref "R2") (pin "2") (pintype "passive")))
-    (net (code "6") (name "LED_G_G") (class "Default")
-      (node (ref "R2") (pin "1") (pintype "passive"))
-      (node (ref "U1") (pin "8") (pinfunction "D7") (pintype "passive")))
-    (net (code "7") (name "LED_R_A") (class "Default")
-      (node (ref "D1") (pin "2") (pinfunction "A") (pintype "passive"))
-      (node (ref "R1") (pin "2") (pintype "passive")))
-    (net (code "8") (name "LED_R_G") (class "Default")
-      (node (ref "R1") (pin "1") (pintype "passive"))
-      (node (ref "U1") (pin "7") (pinfunction "D6") (pintype "passive")))
-    (net (code "9") (name "LORA_BUSY") (class "Default")
-      (node (ref "U1") (pin "4") (pinfunction "D3") (pintype "passive"))
-      (node (ref "U2") (pin "11") (pinfunction "BUSY") (pintype "passive")))
-    (net (code "10") (name "LORA_DIO1") (class "Default")
-      (node (ref "U1") (pin "2") (pinfunction "D1") (pintype "passive"))
-      (node (ref "U2") (pin "12") (pinfunction "DIO1") (pintype "passive")))
-    (net (code "11") (name "LORA_NSS") (class "Default")
-      (node (ref "U1") (pin "5") (pinfunction "D4") (pintype "passive"))
-      (node (ref "U2") (pin "6") (pinfunction "NSS") (pintype "passive")))
-    (net (code "12") (name "LORA_RST") (class "Default")
-      (node (ref "U1") (pin "3") (pinfunction "D2") (pintype "passive"))
-      (node (ref "U2") (pin "5") (pinfunction "NRST") (pintype "passive")))
-    (net (code "13") (name "LORA_RXEN") (class "Default")
-      (node (ref "U1") (pin "6") (pinfunction "D5") (pintype "passive"))
-      (node (ref "U2") (pin "1") (pinfunction "RF_SW") (pintype "passive")))
-    (net (code "14") (name "NFC1") (class "Default")
-      (node (ref "AE1") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "C3") (pin "1") (pintype "passive"))
-      (node (ref "U1") (pin "21") (pinfunction "NFC1") (pintype "passive")))
-    (net (code "15") (name "NFC2") (class "Default")
-      (node (ref "AE1") (pin "2") (pinfunction "2") (pintype "passive"))
-      (node (ref "C4") (pin "1") (pintype "passive"))
-      (node (ref "U1") (pin "22") (pinfunction "NFC2") (pintype "passive")))
-    (net (code "16") (name "RST_MCU") (class "Default")
-      (node (ref "TP1") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "U1") (pin "17") (pinfunction "EN") (pintype "passive")))
-    (net (code "17") (name "SPI_MISO") (class "Default")
-      (node (ref "U1") (pin "10") (pinfunction "D9") (pintype "passive"))
-      (node (ref "U2") (pin "2") (pinfunction "MISO") (pintype "passive")))
-    (net (code "18") (name "SPI_MOSI") (class "Default")
-      (node (ref "U1") (pin "11") (pinfunction "D10") (pintype "passive"))
-      (node (ref "U2") (pin "3") (pinfunction "MOSI") (pintype "passive")))
-    (net (code "19") (name "SPI_SCK") (class "Default")
-      (node (ref "U1") (pin "9") (pinfunction "D8") (pintype "passive"))
-      (node (ref "U2") (pin "4") (pinfunction "SCK") (pintype "passive")))
-    (net (code "20") (name "SWCLK") (class "Default")
-      (node (ref "TP3") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "U1") (pin "16") (pinfunction "SWCLK") (pintype "passive")))
-    (net (code "21") (name "SWDIO") (class "Default")
-      (node (ref "TP2") (pin "1") (pinfunction "1") (pintype "passive"))
-      (node (ref "U1") (pin "15") (pinfunction "SWDIO") (pintype "passive")))
-    (net (code "22") (name "USB_DM") (class "Default")
-      (node (ref "J5") (pin "4") (pinfunction "D-") (pintype "passive"))
-      (node (ref "TP6") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "23") (name "USB_DP") (class "Default")
-      (node (ref "J5") (pin "3") (pinfunction "D+") (pintype "passive"))
-      (node (ref "TP5") (pin "1") (pinfunction "1") (pintype "passive")))
-    (net (code "24") (name "VBATT") (class "Default")
-      (node (ref "SW3") (pin "1") (pinfunction "A") (pintype "passive"))
-      (node (ref "U1") (pin "19") (pinfunction "VBAT") (pintype "passive")))
-    (net (code "25") (name "VBUS") (class "Default")
-      (node (ref "J5") (pin "1") (pinfunction "VBUS") (pintype "passive"))
-      (node (ref "U1") (pin "14") (pinfunction "VBUS") (pintype "passive")))))
+(export
+	(version "E")
+	(design
+		(source "/home/arthur/Documents/ezCore/hardware/MeshTag.kicad_sch")
+		(date "2026-11-13T20:58:58")
+		(tool "Eeschema 10.0.7")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title)
+				(company)
+				(rev)
+				(date)
+				(source "MeshTag.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "AE1")
+			(value "NFC_Coil_Round")
+			(footprint "MeshTag:NFC_Coil_Round")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:NFC_Coil_Round")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "NFC_Coil_Round")
+				(description "Round 2-layer PCB NFC antenna")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fc76a55f-7cdb-46f8-a6f0-778420218b28")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "BT1")
+			(value "LiPo_1S")
+			(footprint "MeshTag:Batt_WirePads_2x")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:Batt_WirePads_2x")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "LiPo_1S")
+				(description "1S LiPo pouch + PCM")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6605f85a-39e2-47d8-b1c2-298810651a51")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C1")
+			(value "C")
+			(footprint "MeshTag:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "21254cb5-386f-4daa-aa86-06952ae1a859")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "C")
+			(footprint "MeshTag:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "223f19a6-59a1-44d4-8dc8-c682c409164e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "C")
+			(footprint "MeshTag:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "975d195c-e9d8-459a-95a4-70ea7fcf4f4e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C4")
+			(value "C")
+			(footprint "MeshTag:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2d63fe9b-e728-4307-b5b1-ab8daa600353")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C5")
+			(value "C")
+			(footprint "MeshTag:C_0402_1005Metric")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8f9cf530-6bfc-4682-88aa-7a840083e3be")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D1")
+			(value "LED")
+			(footprint "MeshTag:LED_0402")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:LED_0402")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "959907eb-c86b-41da-87be-533cf6b16eca")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D2")
+			(value "LED")
+			(footprint "MeshTag:LED_0402")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:LED_0402")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "LED")
+				(description "Light emitting diode")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d6d6bde8-c595-48d8-b3ae-ea4dafbb9c22")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J5")
+			(value "Pogo_4P")
+			(footprint "MeshTag:Pogo_4P_2.54mm")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:Pogo_4P_2.54mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "Pogo_4P")
+				(description "4-pin pogo charge+USB")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "05b240c5-8b66-4242-a6ce-220f7c4441f3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "R")
+			(footprint "MeshTag:R_0402")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:R_0402")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "42cdb672-e980-4984-8e2a-6bb8dc1059a6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R2")
+			(value "R")
+			(footprint "MeshTag:R_0402")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:R_0402")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "938d38b8-2555-4eb6-907f-7a636ec462ae")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW1")
+			(value "SW_Push")
+			(footprint "MeshTag:SW_Push_1P1T_NO_CK_KMR2")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:SW_Push_1P1T_NO_CK_KMR2")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "SW_Push")
+				(description "Push button switch, generic, two pins")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "switch normally-open pushbutton push-button")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8cbf8d92-5770-49e7-a216-a645edbc3ab2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW3")
+			(value "SW_SPDT")
+			(footprint "MeshTag:SW_SPDT_PCM12")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:SW_SPDT_PCM12")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "SW_SPDT")
+				(description "Switch, single pole double throw")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "switch single-pole double-throw spdt ON-ON")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2f00729d-922b-4a5d-8f0b-d0994ab6e261")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP1")
+			(value "TestPoint")
+			(footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a4ede81b-60fc-4e3c-bc90-1b3a347d36fe")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP2")
+			(value "TestPoint")
+			(footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "30d263d0-a56b-4952-8efe-7648576f2eb0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP3")
+			(value "TestPoint")
+			(footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4ca058a3-4956-4163-a451-5a6c787a8e74")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP4")
+			(value "TestPoint")
+			(footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7d2a8307-4538-4a02-b17b-f892b170eb33")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP5")
+			(value "TestPoint")
+			(footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "092772ff-e070-4c1f-938b-60907307e114")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP6")
+			(value "TestPoint")
+			(footprint "MeshTag:TestPoint_Pad_1.0x1.0mm")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:TestPoint_Pad_1.0x1.0mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2bd0cc2c-7782-4576-bdd9-27e66ed9bc8d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "XIAO-nRF52840-SMD")
+			(footprint "MeshTag:XIAO-nRF52840-SMD")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:XIAO-nRF52840-SMD")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "XIAO-nRF52840-SMD")
+				(description "Seeed XIAO nRF52840 (castellated SMD)")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2705ab7d-9a6c-4bed-b612-a2c2387ba6ce")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "21")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "22")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "Wio-SX1262")
+			(footprint "MeshTag:Wio-SX1262-Module")
+			(fields
+				(field
+					(name "Footprint") "MeshTag:Wio-SX1262-Module")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "MeshTag")
+				(part "Wio-SX1262")
+				(description "Seeed Wio-SX1262 LoRa module")
+			)
+			(property
+				(name "Sheetname")
+				(value "MeshTag")
+			)
+			(property
+				(name "Sheetfile")
+				(value "MeshTag.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "54e76e86-b768-4594-90bc-a5e8891da6f0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "MeshTag")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "MeshTag")
+			(part "LED")
+			(description "Light emitting diode")
+			(footprints
+				(fp "LED*")
+				(fp "LED_SMD:*")
+				(fp "LED_THT:*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "LED")
+				(field
+					(name "Footprint") "MeshTag:LED_0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Light emitting diode")
+				(field
+					(name "Sim.Pins") "1=K 2=A")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "K")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "MeshTag")
+			(part "LiPo_1S")
+			(description "1S LiPo pouch + PCM")
+			(fields
+				(field
+					(name "Reference") "BT")
+				(field
+					(name "Value") "LiPo_1S")
+				(field
+					(name "Footprint") "MeshTag:Batt_WirePads_2x")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "1S LiPo pouch + PCM")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "+")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "-")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "MeshTag")
+			(part "NFC_Coil_Round")
+			(description "Round 2-layer PCB NFC antenna")
+			(fields
+				(field
+					(name "Reference") "AE")
+				(field
+					(name "Value") "NFC_Coil_Round")
+				(field
+					(name "Footprint") "MeshTag:NFC_Coil_Round")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Round 2-layer PCB NFC antenna")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "MeshTag")
+			(part "Pogo_4P")
+			(description "4-pin pogo charge+USB")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Pogo_4P")
+				(field
+					(name "Footprint") "MeshTag:Pogo_4P_2.54mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "4-pin pogo charge+USB")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "VBUS")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "D+")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "D-")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "MeshTag")
+			(part "R")
+			(description "Resistor")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R")
+				(field
+					(name "Footprint") "MeshTag:R_0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "MeshTag")
+			(part "SW_Push")
+			(description "Push button switch, generic, two pins")
+			(fields
+				(field
+					(name "Reference") "SW")
+				(field
+					(name "Value") "SW_Push")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Push button switch, generic, two pins")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "MeshTag")
+			(part "SW_SPDT")
+			(description "Switch, single pole double throw")
+			(fields
+				(field
+					(name "Reference") "SW")
+				(field
+					(name "Value") "SW_SPDT")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Switch, single pole double throw")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "B")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "C")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "MeshTag")
+			(part "TestPoint")
+			(description "test point")
+			(footprints
+				(fp "Pin*")
+				(fp "Test*")
+			)
+			(fields
+				(field
+					(name "Reference") "TP")
+				(field
+					(name "Value") "TestPoint")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "MeshTag")
+			(part "Wio-SX1262")
+			(description "Seeed Wio-SX1262 LoRa module")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "Wio-SX1262")
+				(field
+					(name "Footprint") "MeshTag:Wio-SX1262-Module")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Seeed Wio-SX1262 LoRa module")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "RF_SW")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "MISO")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "MOSI")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "SCK")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "NRST")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "NSS")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "VCC")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "ANT")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "BUSY")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "DIO1")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "MeshTag")
+			(part "XIAO-nRF52840-SMD")
+			(description "Seeed XIAO nRF52840 (castellated SMD)")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "XIAO-nRF52840")
+				(field
+					(name "Footprint") "MeshTag:XIAO-nRF52840-SMD")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Seeed XIAO nRF52840 (castellated SMD)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "D0")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "D1")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "D2")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "D3")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "D4")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "D5")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "D6")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "D7")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "D8")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "D9")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "D10")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "3V3_OUT")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "14")
+					(name "VBUS")
+					(type "passive")
+				)
+				(pin
+					(num "15")
+					(name "SWDIO")
+					(type "passive")
+				)
+				(pin
+					(num "16")
+					(name "SWCLK")
+					(type "passive")
+				)
+				(pin
+					(num "17")
+					(name "EN")
+					(type "passive")
+				)
+				(pin
+					(num "18")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "19")
+					(name "VBAT")
+					(type "passive")
+				)
+				(pin
+					(num "20")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "21")
+					(name "NFC1")
+					(type "passive")
+				)
+				(pin
+					(num "22")
+					(name "NFC2")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "MeshTag")
+			(uri "${KIPRJMOD}/lib/MeshTag.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "+3V3")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "12")
+				(pinfunction "3V3_OUT_12")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "8")
+				(pinfunction "VCC_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "2")
+			(name "BAT_P")
+			(class "Default")
+			(node
+				(ref "BT1")
+				(pin "1")
+				(pinfunction "+_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW3")
+				(pin "3")
+				(pinfunction "C_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "3")
+			(name "BTN")
+			(class "Default")
+			(node
+				(ref "SW1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "10")
+				(pinfunction "D9_10")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "GND")
+			(class "Default")
+			(node
+				(ref "BT1")
+				(pin "2")
+				(pinfunction "-_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "D1")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "D2")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J5")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "13")
+				(pinfunction "GND_13")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "18")
+				(pinfunction "GND_18")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "20")
+				(pinfunction "GND_20")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "7")
+				(pinfunction "GND_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "5")
+			(name "LED_G_A")
+			(class "Default")
+			(node
+				(ref "D2")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "LED_G_G")
+			(class "Default")
+			(node
+				(ref "R2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "9")
+				(pinfunction "D8_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "LED_R_A")
+			(class "Default")
+			(node
+				(ref "D1")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "LED_R_G")
+			(class "Default")
+			(node
+				(ref "R1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "8")
+				(pinfunction "D7_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "9")
+			(name "LORA_BUSY")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "7")
+				(pinfunction "D6_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "11")
+				(pinfunction "BUSY_11")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "10")
+			(name "LORA_DIO1")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "11")
+				(pinfunction "D10_11")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "12")
+				(pinfunction "DIO1_12")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "LORA_NSS")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "D0_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "6")
+				(pinfunction "NSS_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "LORA_RST")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "D1_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "5")
+				(pinfunction "NRST_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "LORA_RXEN")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "D5_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "RF_SW_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "NFC1")
+			(class "Default")
+			(node
+				(ref "AE1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "21")
+				(pinfunction "NFC1_21")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "NFC2")
+			(class "Default")
+			(node
+				(ref "AE1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "22")
+				(pinfunction "NFC2_22")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "16")
+			(name "RST_MCU")
+			(class "Default")
+			(node
+				(ref "TP1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "17")
+				(pinfunction "EN_17")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "17")
+			(name "SPI_MISO")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "D4_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "MISO_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "18")
+			(name "SPI_MOSI")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "4")
+				(pinfunction "D3_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "MOSI_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "SPI_SCK")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "D2_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "4")
+				(pinfunction "SCK_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "20")
+			(name "SWCLK")
+			(class "Default")
+			(node
+				(ref "TP3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "16")
+				(pinfunction "SWCLK_16")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "SWDIO")
+			(class "Default")
+			(node
+				(ref "TP2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "15")
+				(pinfunction "SWDIO_15")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "22")
+			(name "USB_DM")
+			(class "Default")
+			(node
+				(ref "J5")
+				(pin "4")
+				(pinfunction "D-_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "23")
+			(name "USB_DP")
+			(class "Default")
+			(node
+				(ref "J5")
+				(pin "3")
+				(pinfunction "D+_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "24")
+			(name "VBATT")
+			(class "Default")
+			(node
+				(ref "SW3")
+				(pin "1")
+				(pinfunction "A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "19")
+				(pinfunction "VBAT_19")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "25")
+			(name "VBUS")
+			(class "Default")
+			(node
+				(ref "J5")
+				(pin "1")
+				(pinfunction "VBUS_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "14")
+				(pinfunction "VBUS_14")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "26")
+			(name "unconnected-(SW3-B-Pad2)")
+			(class "Default")
+			(node
+				(ref "SW3")
+				(pin "2")
+				(pinfunction "B_2")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "27")
+			(name "unconnected-(U2-ANT-Pad9)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "9")
+				(pinfunction "ANT_9")
+				(pintype "passive+no_connect")
+			)
+		)
+	)
+)

@@ -2914,7 +2914,7 @@
 			)
 		)
 	)
-	(global_label "SPI_SCK"
+	(global_label "LED_G_G"
 		(shape input)
 		(at 173.99 105.41 0)
 		(effects
@@ -3024,7 +3024,7 @@
 			)
 		)
 	)
-	(global_label "LED_G_G"
+	(global_label "LED_R_G"
 		(shape input)
 		(at 170.18 102.87 0)
 		(effects
@@ -3156,7 +3156,7 @@
 			)
 		)
 	)
-	(global_label "LED_R_G"
+	(global_label "LORA_BUSY"
 		(shape input)
 		(at 129.54 118.11 180)
 		(effects
@@ -3464,7 +3464,7 @@
 			)
 		)
 	)
-	(global_label "LORA_RST"
+	(global_label "SPI_SCK"
 		(shape input)
 		(at 129.54 107.95 180)
 		(effects
@@ -3618,7 +3618,7 @@
 			)
 		)
 	)
-	(global_label "LORA_BUSY"
+	(global_label "SPI_MOSI"
 		(shape input)
 		(at 125.73 110.49 180)
 		(effects
@@ -3640,7 +3640,7 @@
 			)
 		)
 	)
-	(global_label "BTN"
+	(global_label "LORA_NSS"
 		(shape input)
 		(at 129.54 102.87 180)
 		(effects
@@ -3948,7 +3948,7 @@
 			)
 		)
 	)
-	(global_label "SPI_MISO"
+	(global_label "BTN"
 		(shape input)
 		(at 170.18 107.95 0)
 		(effects
@@ -3970,7 +3970,7 @@
 			)
 		)
 	)
-	(global_label "LORA_NSS"
+	(global_label "SPI_MISO"
 		(shape input)
 		(at 129.54 113.03 180)
 		(effects
@@ -4190,7 +4190,7 @@
 			)
 		)
 	)
-	(global_label "LORA_DIO1"
+	(global_label "LORA_RST"
 		(shape input)
 		(at 125.73 105.41 180)
 		(effects
@@ -4344,7 +4344,7 @@
 			)
 		)
 	)
-	(global_label "SPI_MOSI"
+	(global_label "LORA_DIO1"
 		(shape input)
 		(at 173.99 110.49 0)
 		(effects
