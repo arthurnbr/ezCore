@@ -70,7 +70,8 @@ ROWS = [
     # ---- MCU (centre) ----
     ("U1", "XIAO-nRF52840-SMD", 150, 110, {
         "1": "BTN", "2": "LORA_DIO1", "3": "LORA_RST", "4": "LORA_BUSY",
-        "5": "LORA_NSS", "6": "LORA_RXEN", "9": "SPI_SCK", "10": "SPI_MISO",
+        "5": "LORA_NSS", "6": "LORA_RXEN", "7": "LED_R_G", "8": "LED_G_G",
+        "9": "SPI_SCK", "10": "SPI_MISO",
         "11": "SPI_MOSI", "12": "+3V3", "13": "GND", "14": "VBUS",
         "19": "VBATT", "20": "GND", "21": "NFC1", "22": "NFC2",
         "15": "SWDIO", "16": "SWCLK", "17": "RST_MCU", "18": "GND"}),
@@ -87,8 +88,12 @@ ROWS = [
     ("AE1", "NFC_Coil_Round", 150, 175, {"1": "NFC1", "2": "NFC2"}),
     ("C3", "C", 120, 185, {"1": "NFC1", "2": "GND"}),
     ("C4", "C", 180, 185, {"1": "NFC2", "2": "GND"}),
-    # ---- BUTTONS (top-left) ----
+    # ---- BUTTON + user LED (top-left) ----
     ("SW1", "SW_Push", 70, 75, {"1": "BTN", "2": "GND"}),
+    ("D1", "LED", 55, 95, {"2": "LED_R_A", "1": "GND"}),    # red: anode(2)->R, cathode(1)->GND
+    ("D2", "LED", 70, 95, {"2": "LED_G_A", "1": "GND"}),    # green
+    ("R1", "R", 55, 110, {"1": "LED_R_G", "2": "LED_R_A"}), # red series R: GPIO(1)->anode(2)
+    ("R2", "R", 70, 110, {"1": "LED_G_G", "2": "LED_G_A"}), # green series R
     # ---- BATTERY + switch (bottom-left) ----
     ("BT1", "LiPo_1S", 60, 185, {"1": "BAT_P", "2": "GND"}),
     ("SW3", "SW_SPDT", 95, 185, {"1": "VBATT", "3": "BAT_P", "2": "NC_sw"}),
@@ -109,7 +114,7 @@ PWR_FLAGS = [("+3V3", 40, 150), ("GND", 40, 165), ("VBATT", 40, 180),
              ("USB_DP", 345, 165), ("USB_DM", 345, 175)]
 
 # Explicit no-connects (pins intentionally unused).
-NO_CONNECT = [("U2", "9"), ("SW3", "2"), ("U1", "7"), ("U1", "8")]
+NO_CONNECT = [("U2", "9"), ("SW3", "2")]
 
 # Block annotations: (text, x, y).
 NOTES = [
@@ -126,16 +131,20 @@ NOTES = [
 
 
 def label_dir(ang):
-    """Map a pin angle to a global-label rotation + justify so the text reads
-    outward and stacks cleanly (vertical labels for top/bottom pins)."""
-    # Library pin angles (schematic Y-down): 0 pin exits left, 180 right,
-    # 90 exits downward (bottom pins), 270 exits upward (top pins).
+    """All labels horizontal (rotation 0), justified so the text points OUTWARD
+    (away from the symbol body), never upside-down.
+
+    KiCad global-label justify is relative to the attach point:
+      justify right  -> text sits to the LEFT of the pin
+      justify left   -> text sits to the RIGHT of the pin
+    Library pin angles (schematic Y-down): 0 exits left, 180 right,
+    90 exits downward (bottom), 270 exits upward (top)."""
     return {
-        0:   (180, "right"),   # left-side pin  -> label to the left
-        180: (0,   "right"),   # right-side pin -> label to the right
-        90:  (270, "right"),   # bottom pin     -> label downward (vertical)
-        270: (90,  "right"),   # top pin        -> label upward (vertical)
-    }.get(ang, (0, "right"))
+        0:   (0, "right"),   # left pin   -> text to the left, horizontal
+        180: (0, "left"),    # right pin  -> text to the right, horizontal
+        90:  (0, "left"),    # bottom pin -> text to the right, horizontal
+        270: (0, "left"),    # top pin    -> text to the right, horizontal
+    }.get(ang, (0, "left"))
 
 
 def main():

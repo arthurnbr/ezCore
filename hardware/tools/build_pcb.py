@@ -34,33 +34,34 @@ REFFP = {
     "C3": "C_0402_1005Metric", "C4": "C_0402_1005Metric",
     "SW1": "SW_Push_1P1T_NO_CK_KMR2", "SW3": "SW_SPDT_PCM12", "BT1": "Batt_WirePads_2x",
     "J5": "Pogo_4P_2.54mm",
+    "D1": "LED_0603", "D2": "LED_0603", "R1": "R_0603", "R2": "R_0603",
     "TP1": "TestPoint_Pad_1.0x1.0mm", "TP2": "TestPoint_Pad_1.0x1.0mm",
     "TP3": "TestPoint_Pad_1.0x1.0mm", "TP4": "TestPoint_Pad_1.0x1.0mm",
     "TP5": "TestPoint_Pad_1.0x1.0mm", "TP6": "TestPoint_Pad_1.0x1.0mm",
-    "FID1": "Fiducial_Align_1.5mm", "FID2": "Fiducial_Align_1.5mm", "FID3": "Fiducial_Align_1.5mm",
 }
-# All components on the FRONT face (single-sided etch for parts). The NFC coil is
-# the front tap surface; the Ø45 LiPo and a 0.1 mm ferrite film sit BEHIND the
-# board (the ferrite between coil and battery keeps NFC working). BT1 is just the
-# two solder pads for the battery wires.
+# UX-first placement, all on the FRONT face. Pogo at the TOP, button + bicolour LED
+# on the LEFT (90° from the pogo), SWD/test pads near the button (lower-left),
+# ON/OFF slide switch on the RIGHT, XIAO + NFC coil centred, Wio just below. The
+# keychain notch is at the BOTTOM of the outline (opposite the pogo); the battery
+# (Ø45 + ferrite) sits behind the board.
 # Placement by body centre, board-centre-relative mm: (dx, dy, rot, back_side).
 # +x right, +y down. Centre of board is (0,0).
 PLACE = {
-    "AE1": (0, -1, 60, False),      # round NFC coil under the XIAO (feed -> NFC pads)
-    "U1":  (0, -1, 0, False),       # XIAO, centre
-    "U2":  (0, 15, 0, False),       # Wio-SX1262 at the bottom edge, IPEX to the rim
-    "C5":  (6.0, 12.5, 0, False),   # Wio VCC decoupling
-    "C1":  (-11.28, -4.1, 0, False), "C2": (-11.28, 4.1, 0, False),  # 3V3 decoupling
-    "C3":  (-6, 6, 0, False), "C4": (6, 6, 0, False),                # NFC tuning
-    "SW1": (-12.73, -12.73, 0, False),   # user button (top-left)
-    "SW3": (12.73, -12.73, 0, False),    # battery slide switch (top-right)
-    "J5":  (0, -19.5, 0, False),         # pogo charge/USB pads at the top rim
-    "BT1": (0, -11, 0, False),           # LiPo wire pads (battery body is behind)
-    "TP1": (-11.13, -17.81, 0, False), "TP2": (-7.35, -20.2, 0, False),  # RST / SWDIO
-    "TP3": (7.35, -20.2, 0, False),  "TP4": (11.13, -17.81, 0, False),   # SWCLK / GND
-    "TP5": (-17.15, -6.93, 0, False), "TP6": (17.15, -6.93, 0, False),    # USB D+/D-
-    "FID1": (-19.05, 11.0, 0, False), "FID2": (19.05, 11.0, 0, False),
-    "FID3": (-0.79, -22.49, 0, False),
+    "U1":  (0, -2, 0, False),         # XIAO, centre (nudged up to free the bottom)
+    "AE1": (0, -2, 60, False),        # NFC coil under the XIAO (feed -> NFC pads)
+    "U2":  (0, 13, 0, False),         # Wio-SX1262 below the XIAO
+    "C5": (14, 13, 0, False),         # Wio VCC decoupling
+    "C1": (-12, 10, 0, False), "C2": (12, 10, 0, False),   # 3V3 decoupling
+    "C3": (-11, 14, 0, False),  "C4": (11, 14, 0, False),      # NFC tuning
+    "J5":  (0, -20, 0, False),        # POGO charge/USB pads, top
+    "BT1": (0, -14.5, 0, False),      # LiPo wire pads (battery body is behind)
+    "SW1": (-19, -2, 0, False),       # user BUTTON, far left (90° from pogo)
+    "D1":  (-14.5, -5, 0, False), "D2": (-14.5, -8, 0, False),   # bicolour LED (R/G)
+    "R1":  (-18.5, -5, 0, False), "R2": (-18.5, -8, 0, False),   # LED series resistors
+    "TP1": (-20, 3, 0, False), "TP2": (-20, 6, 0, False),       # SWD/RST test pads,
+    "TP3": (-18, 9, 0, False), "TP4": (-15, 11, 0, False),    #   near the button
+    "TP5": (-6, -18, 0, False), "TP6": (6, -18, 0, False),      # USB D+/D- (by pogo)
+    "SW3": (19, -2, 90, False),       # ON/OFF slide switch, right
 }
 
 
@@ -144,17 +145,52 @@ def main():
 
 
 def draw_outline(board):
-    """Plain round board Ø48 as a single Edge.Cuts circle.
+    """Round board Ø48 with a keychain tab at the BOTTOM and edge registration
+    marks for double-sided home etching.
 
-    No keychain ear or hole: the attachment point is handled on the enclosure, not
-    the PCB (per project decision)."""
-    c = pcbnew.PCB_SHAPE(board)
-    c.SetShape(pcbnew.SHAPE_T_CIRCLE)
-    c.SetCenter(VM(CX, CY))
-    c.SetEnd(VM(CX + R, CY))
-    c.SetLayer(pcbnew.Edge_Cuts)
-    c.SetWidth(MM(0.1))
-    board.Add(c)
+    The main circle is cut by a small bump (tab) at the bottom where the user
+    drills the keychain hole themselves; no copper or plated hole is placed there.
+    Four short registration ticks on Edge.Cuts (N/E/S/W) let the two photo films be
+    aligned without drilled fiducials."""
+    import math as _m
+    # One CLOSED contour: the main Ø48 circle joined to a keychain tab at the
+    # bottom, built from two arcs that meet at the circle/tab intersections.
+    tab_r = 3.5
+    tab_cy = CY + R + 1.0                       # tab centre below the rim (+Y)
+    dc = abs(tab_cy - CY)
+    a = (R ** 2 - tab_r ** 2 + dc ** 2) / (2 * dc)
+    h = _m.sqrt(R ** 2 - a ** 2)
+    py = CY + a
+    L = (CX - h, py)                            # left intersection
+    Rr = (CX + h, py)                           # right intersection
+
+    def arc(start, mid, end):
+        s = pcbnew.PCB_SHAPE(board)
+        s.SetShape(pcbnew.SHAPE_T_ARC)
+        s.SetArcGeometry(VM(*start), VM(*mid), VM(*end))
+        s.SetLayer(pcbnew.Edge_Cuts); s.SetWidth(MM(0.1)); board.Add(s)
+
+    # main circle arc: left intersection -> top -> right intersection (the long way)
+    arc(L, (CX, CY - R), Rr)
+    # tab arc: right intersection -> tab bottom -> left intersection
+    arc(Rr, (CX, tab_cy + tab_r), L)
+
+    # silk guide ring where to drill the keychain hole (no copper, no plated hole)
+    g = pcbnew.PCB_SHAPE(board)
+    g.SetShape(pcbnew.SHAPE_T_CIRCLE)
+    g.SetCenter(VM(CX, tab_cy)); g.SetEnd(VM(CX + 1.2, tab_cy))
+    g.SetLayer(pcbnew.F_SilkS); g.SetWidth(MM(0.2)); board.Add(g)
+
+    # edge registration ticks on F.Silk at N/E/W (recto-verso alignment, no holes)
+    for ang in (90, 0, 180):
+        r = _m.radians(ang)
+        x0 = CX + (R - 1.5) * _m.cos(r); y0 = CY - (R - 1.5) * _m.sin(r)
+        x1 = CX + (R + 0.0) * _m.cos(r); y1 = CY - (R + 0.0) * _m.sin(r)
+        for layer in (pcbnew.F_SilkS, pcbnew.B_SilkS):
+            t = pcbnew.PCB_SHAPE(board)
+            t.SetShape(pcbnew.SHAPE_T_SEGMENT)
+            t.SetStart(VM(x0, y0)); t.SetEnd(VM(x1, y1))
+            t.SetLayer(layer); t.SetWidth(MM(0.2)); board.Add(t)
 
 
 def zone_sexpr(name, netcode, netname, layers, pts, keepout=False):

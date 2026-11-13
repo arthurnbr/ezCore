@@ -1,14 +1,29 @@
-# ezCore — porte-clés compagnon MeshCore (V2, circulaire)
+# ezCore — porte-clés compagnon MeshCore (V3, circulaire, UX)
 
-Compagnon MeshCore ultra-compact en **disque Ø48 mm** (type AirTag, en plus gros)
-construit autour du **Seeed XIAO nRF52840** + module LoRa **Wio-SX1262** (EU868) :
-appairage BLE sans code, mise à jour OTA par application, **antenne NFC ronde
-intégrée** pour l'appairage par approche, **port de charge/flash magnétique 4
-points** (pogo), et batterie **1000 mAh** gérée sur la carte.
+Compagnon MeshCore ultra-compact en **disque Ø48 mm** (type AirTag) autour du
+**Seeed XIAO nRF52840** + module LoRa **Wio-SX1262** (EU868) : appairage BLE sans
+code, mise à jour OTA par application, **antenne NFC ronde intégrée**, **LED
+bi-couleur** de retour utilisateur, **port de charge/flash magnétique 4 points**
+(pogo), et batterie **1050 mAh** au dos du boîtier.
 
-> État : PCB **générée par script** et routée (Freerouting). ERC 0/0. Quelques
-> points DRC cosmétiques à finir dans KiCad (voir « Limitations connues »). Tout
-> est reproductible via `hardware/tools/`.
+> État : schéma ERC 0/0, PCB placée UX + routée (Freerouting). Quelques points DRC
+> à finir dans KiCad. Tout est reproductible via `hardware/tools/`.
+
+## Disposition UX (V3)
+
+Placement pensé usage, carte propre et symétrique :
+
+- **Pogo `J5` en haut** (VBUS/GND/D+/D−) : charge + flash UF2 + série USB.
+- **Bouton `SW1` + LED bi-couleur `D1`/`D2` à gauche** (90° du pogo) : retour
+  visuel type AirPods (rouge = charge, vert = prêt, orange = transition). Pilotée
+  par D6/D7 du XIAO via `R1`/`R2` (série).
+- **Ports de debug SWD `TP1-TP4` sous le bouton** (RST / SWDIO / SWCLK / GND).
+- **Interrupteur ON/OFF `SW3` à droite** (coupe la batterie).
+- **XIAO `U1` + bobine NFC + Wio `U2` au centre**, pour un routage court.
+- **Languette porte-clés en bas** (opposée au pogo) : contour avec repère de
+  perçage en sérigraphie — tu perces toi-même, pas de trou dans le cuivre.
+- **Repères de calage recto-verso** : traits de sérigraphie N/E/O en bord (plus de
+  trous FID).
 
 ## Nouveautés V2 (vs V1 rectangulaire 26 × 52)
 
@@ -94,6 +109,8 @@ au firmware) :
 | BUSY              | D3          | LORA_BUSY  |
 | RF_SW / RXEN      | D5          | LORA_RXEN  |
 | SCK / MISO / MOSI | D8 / D9 / D10 | SPI_*    |
+| LED rouge         | D6          | via R1     |
+| LED verte         | D7          | via R2     |
 
 - **U1** XIAO nRF52840 (CMS à plat, castellations), face avant.
 - **U2** module Wio-SX1262 nu (IPEX), face avant, au-dessus du XIAO.
