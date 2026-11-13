@@ -197,16 +197,30 @@ def main():
          '\t(paper "A3")',
          '\t(lib_symbols\n' + lib_syms + '\n\t)']
 
+    # footprint assigned to each reference (must match build_pcb.py REFFP so the
+    # "Update PCB from schematic" step finds a footprint for every symbol)
+    FP = {
+        "U1": "XIAO-nRF52840-SMD", "U2": "Wio-SX1262-Module", "AE1": "NFC_Coil_Round",
+        "C1": "C_0402_1005Metric", "C2": "C_0402_1005Metric", "C3": "C_0402_1005Metric",
+        "C4": "C_0402_1005Metric", "C5": "C_0402_1005Metric",
+        "SW1": "SW_Push_1P1T_NO_CK_KMR2", "SW3": "SW_SPDT_PCM12",
+        "BT1": "Batt_WirePads_2x", "J5": "Pogo_4P_2.54mm",
+        "D1": "LED_0402", "D2": "LED_0402", "R1": "R_0402", "R2": "R_0402",
+        "TP1": "TestPoint_Pad_1.0x1.0mm", "TP2": "TestPoint_Pad_1.0x1.0mm",
+        "TP3": "TestPoint_Pad_1.0x1.0mm", "TP4": "TestPoint_Pad_1.0x1.0mm",
+        "TP5": "TestPoint_Pad_1.0x1.0mm", "TP6": "TestPoint_Pad_1.0x1.0mm",
+    }
     # symbol instances (Reference above, Value below — never over the pins)
     for ref, lib, x, y, uid in insts:
+        fp = "MeshTag:" + FP[ref] if ref in FP else ""
         P.append(
             '\t(symbol\n\t\t(lib_id "MeshTag:%s")\n\t\t(at %s %s 0)\n\t\t(unit 1)\n'
             '\t\t(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)\n\t\t(uuid "%s")\n'
             '\t\t(property "Reference" "%s" (at %s %s 0) (effects (font (size 1.27 1.27))))\n'
             '\t\t(property "Value" "%s" (at %s %s 0) (effects (font (size 1 1)) (justify bottom)))\n'
-            '\t\t(property "Footprint" "" (at %s %s 0) (effects (font (size 1.27 1.27)) hide))\n'
+            '\t\t(property "Footprint" "%s" (at %s %s 0) (effects (font (size 1.27 1.27)) hide))\n'
             '\t\t(instances (project "MeshTag" (path "/%s" (reference "%s") (unit 1))))\n\t)'
-            % (lib, x, y, uid, ref, x, y - 12, lib, x, y + 12, x, y, proj_uuid, ref))
+            % (lib, x, y, uid, ref, x, y - 12, lib, x, y + 12, fp, x, y, proj_uuid, ref))
 
     # stub wires for dense parts
     for (ax, ay), (bx, by) in wires:

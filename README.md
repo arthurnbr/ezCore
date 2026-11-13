@@ -115,7 +115,9 @@ au firmware) :
 - **U1** XIAO nRF52840 (CMS à plat, castellations), face avant.
 - **U2** module Wio-SX1262 nu (IPEX), face avant, au-dessus du XIAO.
 - **AE1** bobine NFC 2 couches (net-tie NFC1/NFC2) pour l'appairage par approche.
-- **C1/C2** découplage 3V3 ; **C3/C4** condensateurs d'accord NFC (face arrière).
+- **C1/C2** découplage 3V3, **C3/C4** accord NFC, **C5** découplage Wio — tous en
+  **0402** (petits). **D1/D2** LED bi-couleur 0402 + **R1/R2** résistances 0402.
+  Tous les symboles ont leur **footprint assigné** (mise à jour schéma → PCB OK).
 - **SW1** bouton utilisateur ; **SW3** interrupteur de coupure batterie.
 - **BT1** pastilles fils LiPo 1S ; **TP1-4** RST_MCU / SWDIO / SWCLK / GND.
 - Plan de masse coulé sur les deux faces (zone médiane).
