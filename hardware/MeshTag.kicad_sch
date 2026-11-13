@@ -4950,7 +4950,7 @@
 				)
 			)
 		)
-		(property "JLC" "DNP - soudé à la main (non assemblé par JLC)"
+		(property "JLC" "Non assemblé par JLC - soudé à la main"
 			(at 149.86 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -5682,7 +5682,7 @@
 				)
 			)
 		)
-		(property "JLC" "DNP - soudé à la main (non assemblé par JLC)"
+		(property "JLC" "Non assemblé par JLC - soudé à la main"
 			(at 234.95 110.49 0)
 			(hide yes)
 			(show_name no)

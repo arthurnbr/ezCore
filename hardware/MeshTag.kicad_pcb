@@ -1555,7 +1555,7 @@
 				)
 			)
 		)
-		(property "JLC" "DNP - soudé à la main (non assemblé par JLC)"
+		(property "JLC" "Non assemblé par JLC - soudé à la main"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -1568,7 +1568,7 @@
 			)
 		)
 		(path "/54e76e86-b768-4594-90bc-a5e8891da6f0")
-		(attr smd exclude_from_pos_files exclude_from_bom dnp)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -5.8 -5.5)
@@ -11878,7 +11878,7 @@
 				)
 			)
 		)
-		(property "JLC" "DNP - soudé à la main (non assemblé par JLC)"
+		(property "JLC" "Non assemblé par JLC - soudé à la main"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -11891,7 +11891,7 @@
 			)
 		)
 		(path "/2705ab7d-9a6c-4bed-b612-a2c2387ba6ce")
-		(attr exclude_from_pos_files exclude_from_bom dnp)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 0 -1.987)

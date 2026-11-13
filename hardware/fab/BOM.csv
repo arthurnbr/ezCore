@@ -11,5 +11,5 @@
 "SW1","KMR221GLFS","MeshTag:SW_Push_1P1T-SH_NO_CK_KMR2xxG","1","C72443","KMR221GLFS","C&K",""
 "SW3","PCM12SMTR","MeshTag:SW_SPDT_PCM12","1","C221841","PCM12SMTR","C&K",""
 "TP1-TP6","TestPoint","MeshTag:TestPoint_Pad_1.0x1.0mm","6","","","",""
-"U1","XIAO-nRF52840-SMD","MeshTag:XIAO-nRF52840-SMD","1","","102010448","Seeed Studio","DNP - soudé à la main (non assemblé par JLC)"
-"U2","Wio-SX1262","MeshTag:Wio-SX1262-Module","1","","114993390","Seeed Studio","DNP - soudé à la main (non assemblé par JLC)"
+"U1","XIAO-nRF52840-SMD","MeshTag:XIAO-nRF52840-SMD","1","","102010448","Seeed Studio","Non assemblé par JLC - soudé à la main"
+"U2","Wio-SX1262","MeshTag:Wio-SX1262-Module","1","","114993390","Seeed Studio","Non assemblé par JLC - soudé à la main"

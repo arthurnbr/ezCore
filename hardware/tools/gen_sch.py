@@ -215,7 +215,7 @@ def main():
     # Value + JLC assembly fields per reference (BOM/CPL for JLCPCB PCBA).
     _lc = lambda lcsc, mpn, mfr: (("LCSC", lcsc), ("MPN", mpn), ("Manufacturer", mfr))
     _dnp = lambda mpn: (("MPN", mpn), ("Manufacturer", "Seeed Studio"),
-                        ("JLC", "DNP - soudé à la main (non assemblé par JLC)"))
+                        ("JLC", "Non assemblé par JLC - soudé à la main"))
     BOM = {
         "C1": ("10uF 6.3V X5R", _lc("C15525", "CL05A106MQ5NUNC", "Samsung Electro-Mechanics")),
         "C2": ("100nF 16V X7R", _lc("C1525", "CL05B104KO5NNNC", "Samsung Electro-Mechanics")),

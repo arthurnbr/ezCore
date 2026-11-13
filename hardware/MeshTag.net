@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/home/arthur/Documents/ezCore/hardware/MeshTag.kicad_sch")
-		(date "2026-11-13T23:33:13")
+		(date "2026-11-14T00:40:41")
 		(tool "Eeschema 10.0.7")
 		(sheet
 			(number "1")
@@ -1325,7 +1325,7 @@
 				(field
 					(name "Manufacturer") "Seeed Studio")
 				(field
-					(name "JLC") "DNP - soudé à la main (non assemblé par JLC)")
+					(name "JLC") "Non assemblé par JLC - soudé à la main")
 				(field
 					(name "Footprint") "MeshTag:XIAO-nRF52840-SMD")
 				(field
@@ -1350,7 +1350,7 @@
 			)
 			(property
 				(name "JLC")
-				(value "DNP - soudé à la main (non assemblé par JLC)")
+				(value "Non assemblé par JLC - soudé à la main")
 			)
 			(property
 				(name "Sheetname")
@@ -1449,7 +1449,7 @@
 				(field
 					(name "Manufacturer") "Seeed Studio")
 				(field
-					(name "JLC") "DNP - soudé à la main (non assemblé par JLC)")
+					(name "JLC") "Non assemblé par JLC - soudé à la main")
 				(field
 					(name "Footprint") "MeshTag:Wio-SX1262-Module")
 				(field
@@ -1474,7 +1474,7 @@
 			)
 			(property
 				(name "JLC")
-				(value "DNP - soudé à la main (non assemblé par JLC)")
+				(value "Non assemblé par JLC - soudé à la main")
 			)
 			(property
 				(name "Sheetname")

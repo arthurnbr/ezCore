@@ -102,8 +102,11 @@ cd hardware && python3 tools/export_jlc.py   # → fab/jlc/
 ```
 
 JLC pose les **12 composants CMS/THT** du tableau ci-dessous ; **U1 (XIAO) et U2
-(Wio-SX1262) sont DNP** (marqués « Do Not Populate », hors BOM/CPL) et soudés à la
-main. Les champs `LCSC` / `MPN` / `Manufacturer` sont dans le schéma.
+(Wio-SX1262) ne sont pas assemblés** : pas de champ `LCSC`, et « exclu de la BOM /
+des fichiers de placement » sur le PCB → absents de la BOM et du CPL JLC, soudés à
+la main. Ils ne sont **pas** marqués DNP pour que leur modèle 3D reste visible
+(KiCad masque le 3D des composants DNP). Les champs `LCSC` / `MPN` /
+`Manufacturer` sont dans le schéma.
 
 | Réf | Valeur | LCSC | MPN | Type JLC |
 |---|---|---|---|---|
