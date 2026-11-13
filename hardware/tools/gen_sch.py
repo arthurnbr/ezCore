@@ -70,8 +70,8 @@ ROWS = [
     # ---- MCU (centre) ----
     ("U1", "XIAO-nRF52840-SMD", 150, 110, {
         "1": "LORA_NSS", "2": "LORA_RST", "3": "SPI_SCK", "4": "SPI_MOSI",
-        "5": "SPI_MISO", "6": "LORA_RXEN", "7": "LORA_BUSY", "8": "LED_R_G",
-        "9": "LED_G_G", "10": "BTN",
+        "5": "SPI_MISO", "6": "LORA_RXEN", "7": "LORA_BUSY", "8": "BTN",
+        "9": "LED_G_G", "10": "LED_R_G",
         "11": "LORA_DIO1", "12": "+3V3", "13": "GND", "14": "VBUS",
         "19": "VBATT", "20": "GND", "21": "NFC1", "22": "NFC2",
         "15": "SWDIO", "16": "SWCLK", "17": "RST_MCU", "18": "GND"}),
@@ -95,8 +95,9 @@ ROWS = [
     ("R1", "R", 55, 110, {"1": "LED_R_G", "2": "LED_R_A"}), # red series R: GPIO(1)->anode(2)
     ("R2", "R", 70, 110, {"1": "LED_G_G", "2": "LED_G_A"}), # green series R
     # ---- BATTERY + switch (bottom-left) ----
-    ("BT1", "LiPo_1S", 60, 185, {"1": "BAT_P", "2": "GND"}),
-    ("SW3", "SW_SPDT", 95, 185, {"1": "VBATT", "3": "BAT_P", "2": "NC_sw"}),
+    # Low-side cut: BAT+ stays on VBATT, SW3 opens BAT- from GND.
+    ("BT1", "LiPo_1S", 60, 185, {"1": "VBATT", "2": "BAT_N"}),
+    ("SW3", "SW_SPDT", 95, 185, {"1": "GND", "3": "BAT_N", "2": "NC_sw"}),
     # ---- CHARGE / USB (right) ----
     ("J5", "Pogo_4P", 290, 160, {"1": "VBUS", "2": "GND", "3": "USB_DP", "4": "USB_DM"}),
     ("TP5", "TestPoint", 315, 165, {"1": "USB_DP"}),
@@ -110,7 +111,7 @@ ROWS = [
 
 # PWR_FLAGs so every supply net is driven (ERC clean).
 PWR_FLAGS = [("+3V3", 40, 150), ("GND", 40, 165), ("VBATT", 40, 180),
-             ("VBUS", 40, 120), ("BAT_P", 40, 135),
+             ("VBUS", 40, 120), ("BAT_N", 40, 135),
              ("USB_DP", 345, 165), ("USB_DM", 345, 175)]
 
 # Explicit no-connects (pins intentionally unused).

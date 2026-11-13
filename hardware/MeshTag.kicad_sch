@@ -2738,7 +2738,7 @@
 			)
 		)
 	)
-	(global_label "VBATT"
+	(global_label "GND"
 		(shape input)
 		(at 100.33 182.88 0)
 		(effects
@@ -2804,7 +2804,7 @@
 			)
 		)
 	)
-	(global_label "BAT_P"
+	(global_label "BAT_N"
 		(shape input)
 		(at 39.37 134.62 180)
 		(effects
@@ -2870,7 +2870,7 @@
 			)
 		)
 	)
-	(global_label "BAT_P"
+	(global_label "BAT_N"
 		(shape input)
 		(at 100.33 187.96 0)
 		(effects
@@ -3002,7 +3002,7 @@
 			)
 		)
 	)
-	(global_label "GND"
+	(global_label "BAT_N"
 		(shape input)
 		(at 59.69 190.5 0)
 		(effects
@@ -3024,7 +3024,7 @@
 			)
 		)
 	)
-	(global_label "LED_R_G"
+	(global_label "BTN"
 		(shape input)
 		(at 170.18 102.87 0)
 		(effects
@@ -3948,7 +3948,7 @@
 			)
 		)
 	)
-	(global_label "BTN"
+	(global_label "LED_R_G"
 		(shape input)
 		(at 170.18 107.95 0)
 		(effects
@@ -4080,7 +4080,7 @@
 			)
 		)
 	)
-	(global_label "BAT_P"
+	(global_label "VBATT"
 		(shape input)
 		(at 59.69 180.34 0)
 		(effects

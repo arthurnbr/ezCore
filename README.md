@@ -16,7 +16,7 @@ Placement pensé usage, carte propre et symétrique :
 - **Pogo `J5` en haut** (VBUS/GND/D+/D−) : charge + flash UF2 + série USB.
 - **Bouton `SW1` + LED bi-couleur `D1`/`D2` à gauche** (90° du pogo) : retour
   visuel type AirPods (rouge = charge, vert = prêt, orange = transition). Pilotée
-  par D7/D8 du XIAO via `R1`/`R2` (série).
+  par D9 (rouge) / D8 (vert) du XIAO via `R1`/`R2` (série).
 - **Ports de debug SWD `TP1-TP4` sous le bouton** (RST / SWDIO / SWCLK / GND).
 - **Interrupteur ON/OFF `SW3` à droite** (coupe la batterie).
 - **XIAO `U1` + bobine NFC + Wio `U2` au centre**, pour un routage court.
@@ -113,9 +113,9 @@ I2C désactivé) et une copie de `variant.h` (`PIN_SPI_*` y sont codés en dur).
 | RF_SW / RXEN    | 1          | 6        | D5          | P0.05    | LORA_RXEN |
 | BUSY            | 11         | 7        | D6          | P1.11    | LORA_BUSY |
 | DIO1            | 12         | 11       | D10         | P1.15    | LORA_DIO1 |
-| LED rouge       | —          | 8        | D7          | P1.12    | via R1    |
+| Bouton `SW1`    | —          | 8        | D7          | P1.12    | BTN       |
 | LED verte       | —          | 9        | D8          | P1.13    | via R2    |
-| Bouton `SW1`    | —          | 10       | D9          | P1.14    | BTN       |
+| LED rouge       | —          | 10       | D9          | P1.14    | via R1    |
 
 - **U1** XIAO nRF52840 (CMS à plat, castellations), face avant.
 - **U2** module Wio-SX1262 nu (IPEX), face avant, au-dessus du XIAO.
@@ -123,7 +123,8 @@ I2C désactivé) et une copie de `variant.h` (`PIN_SPI_*` y sont codés en dur).
 - **C1/C2** découplage 3V3, **C3/C4** accord NFC, **C5** découplage Wio — tous en
   **0402** (petits). **D1/D2** LED bi-couleur 0402 + **R1/R2** résistances 0402.
   Tous les symboles ont leur **footprint assigné** (mise à jour schéma → PCB OK).
-- **SW1** bouton utilisateur ; **SW3** interrupteur de coupure batterie.
+- **SW1** bouton utilisateur ; **SW3** interrupteur de coupure batterie **côté
+  masse** : BAT+ reste sur `VBATT`, SW3 relie/coupe BAT− (`BAT_N`) de `GND`.
 - **BT1** pastilles fils LiPo 1S ; **TP1-4** RST_MCU / SWDIO / SWCLK / GND.
 - Plan de masse coulé sur les deux faces (zone médiane).
 - **Keep-out antenne BLE** : pas de cuivre sous l'antenne 2,4 GHz intégrée du XIAO.

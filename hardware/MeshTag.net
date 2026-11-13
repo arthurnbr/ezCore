@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/home/arthur/Documents/ezCore/hardware/MeshTag.kicad_sch")
-		(date "2026-11-13T20:58:58")
+		(date "2026-11-13T22:01:15")
 		(tool "Eeschema 10.0.7")
 		(sheet
 			(number "1")
@@ -1832,12 +1832,12 @@
 		)
 		(net
 			(code "2")
-			(name "BAT_P")
+			(name "BAT_N")
 			(class "Default")
 			(node
 				(ref "BT1")
-				(pin "1")
-				(pinfunction "+_1")
+				(pin "2")
+				(pinfunction "-_2")
 				(pintype "passive")
 			)
 			(node
@@ -1859,8 +1859,8 @@
 			)
 			(node
 				(ref "U1")
-				(pin "10")
-				(pinfunction "D9_10")
+				(pin "8")
+				(pinfunction "D7_8")
 				(pintype "passive")
 			)
 		)
@@ -1868,12 +1868,6 @@
 			(code "4")
 			(name "GND")
 			(class "Default")
-			(node
-				(ref "BT1")
-				(pin "2")
-				(pinfunction "-_2")
-				(pintype "passive")
-			)
 			(node
 				(ref "C1")
 				(pin "2")
@@ -1921,6 +1915,12 @@
 				(ref "SW1")
 				(pin "2")
 				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW3")
+				(pin "1")
+				(pinfunction "A_1")
 				(pintype "passive")
 			)
 			(node
@@ -2019,8 +2019,8 @@
 			)
 			(node
 				(ref "U1")
-				(pin "8")
-				(pinfunction "D7_8")
+				(pin "10")
+				(pinfunction "D9_10")
 				(pintype "passive")
 			)
 		)
@@ -2294,9 +2294,9 @@
 			(name "VBATT")
 			(class "Default")
 			(node
-				(ref "SW3")
+				(ref "BT1")
 				(pin "1")
-				(pinfunction "A_1")
+				(pinfunction "+_1")
 				(pintype "passive")
 			)
 			(node
