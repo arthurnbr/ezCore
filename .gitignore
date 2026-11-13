@@ -1,0 +1,5 @@
+*.kicad_pcb-bak
+*-backups/
+fp-info-cache
+*.zoneinfo
+hardware/tools/freerouting.jar

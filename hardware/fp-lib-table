@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "MeshTag")(type "KiCad")(uri "${KIPRJMOD}/lib/MeshTag.pretty")(options "")(descr "MeshTag local footprints"))
+)

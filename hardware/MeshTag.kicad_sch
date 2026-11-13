@@ -1,0 +1,1147 @@
+(kicad_sch
+	(version 20250114)
+	(generator "meshtag") (generator_version "9.0")
+	(uuid "2c88a35e-2753-4686-aec6-52b0a26456d3")
+	(paper "A4")
+	(lib_symbols
+			(symbol "MeshTag:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+			(symbol "MeshTag:LiPo_1S"
+			(exclude_from_sim no) (in_bom yes) (on_board yes)
+			(property "Reference" "BT" (at 2.54 3 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "LiPo_1S" (at 2.54 -3 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "MeshTag:Batt_WirePads_2x" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(property "Description" "1S LiPo pouch + PCM" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(symbol "LiPo_1S_0_1"
+				(polyline (pts (xy -1.27 0.635) (xy 1.27 0.635)) (stroke (width 0.254) (type default)) (fill (type none)))
+				(polyline (pts (xy -0.635 1.27) (xy 0.635 1.27)) (stroke (width 0.508) (type default)) (fill (type none)))
+				(polyline (pts (xy -1.27 -1.905) (xy 1.27 -1.905)) (stroke (width 0.254) (type default)) (fill (type none)))
+				(polyline (pts (xy -0.635 -1.27) (xy 0.635 -1.27)) (stroke (width 0.508) (type default)) (fill (type none)))
+			)
+			(symbol "LiPo_1S_1_1"
+				(pin passive line (at 0 5.08 270) (length 2.54)
+					(name "+" (effects (font (size 1 1))))
+					(number "1" (effects (font (size 1 1)))))
+				(pin passive line (at 0 -5.08 90) (length 2.54)
+					(name "-" (effects (font (size 1 1))))
+					(number "2" (effects (font (size 1 1)))))
+			)
+		)
+			(symbol "MeshTag:NFC_Coil"
+			(exclude_from_sim no) (in_bom yes) (on_board yes)
+			(property "Reference" "AE" (at 0 5.8100000000000005 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "NFC_Coil" (at 0 -5.8100000000000005 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "MeshTag:NFC_Coil_5T_2L" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(property "Description" "2-layer PCB NFC antenna" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(symbol "NFC_Coil_0_1"
+				(rectangle (start -3.81 3.81) (end 3.81 -3.81) (stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "NFC_Coil_1_1"
+				(pin passive line (at -6.35 0.0 0) (length 2.54)
+					(name "1" (effects (font (size 1 1))))
+					(number "1" (effects (font (size 1 1)))))
+				(pin passive line (at 6.35 1.27 180) (length 2.54)
+					(name "2" (effects (font (size 1 1))))
+					(number "2" (effects (font (size 1 1)))))
+			)
+		)
+			(symbol "MeshTag:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+			(symbol "MeshTag:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+			(symbol "MeshTag:SW_SPDT"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SPDT"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Switch, single pole double throw"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_SPDT_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 0.254) (xy 1.651 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SPDT_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+			(symbol "MeshTag:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+			(symbol "MeshTag:Wio-SX1262"
+			(exclude_from_sim no) (in_bom yes) (on_board yes)
+			(property "Reference" "U" (at 0 10.89 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "Wio-SX1262" (at 0 -10.89 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "MeshTag:Wio-SX1262-Module" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(property "Description" "Seeed Wio-SX1262 LoRa module" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(symbol "Wio-SX1262_0_1"
+				(rectangle (start -6.35 8.89) (end 6.35 -8.89) (stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "Wio-SX1262_1_1"
+				(pin passive line (at -8.89 6.35 0) (length 2.54)
+					(name "RF_SW" (effects (font (size 1 1))))
+					(number "1" (effects (font (size 1 1)))))
+				(pin passive line (at -8.89 3.81 0) (length 2.54)
+					(name "MISO" (effects (font (size 1 1))))
+					(number "2" (effects (font (size 1 1)))))
+				(pin passive line (at -8.89 1.27 0) (length 2.54)
+					(name "MOSI" (effects (font (size 1 1))))
+					(number "3" (effects (font (size 1 1)))))
+				(pin passive line (at -8.89 -1.27 0) (length 2.54)
+					(name "SCK" (effects (font (size 1 1))))
+					(number "4" (effects (font (size 1 1)))))
+				(pin passive line (at -8.89 -3.81 0) (length 2.54)
+					(name "NRST" (effects (font (size 1 1))))
+					(number "5" (effects (font (size 1 1)))))
+				(pin passive line (at -8.89 -6.35 0) (length 2.54)
+					(name "NSS" (effects (font (size 1 1))))
+					(number "6" (effects (font (size 1 1)))))
+				(pin passive line (at 8.89 6.35 180) (length 2.54)
+					(name "DIO1" (effects (font (size 1 1))))
+					(number "12" (effects (font (size 1 1)))))
+				(pin passive line (at 8.89 3.81 180) (length 2.54)
+					(name "BUSY" (effects (font (size 1 1))))
+					(number "11" (effects (font (size 1 1)))))
+				(pin passive line (at 8.89 1.27 180) (length 2.54)
+					(name "GND" (effects (font (size 1 1))))
+					(number "10" (effects (font (size 1 1)))))
+				(pin passive line (at 8.89 -1.27 180) (length 2.54)
+					(name "ANT" (effects (font (size 1 1))))
+					(number "9" (effects (font (size 1 1)))))
+				(pin passive line (at 8.89 -3.81 180) (length 2.54)
+					(name "VCC" (effects (font (size 1 1))))
+					(number "8" (effects (font (size 1 1)))))
+				(pin passive line (at 8.89 -6.35 180) (length 2.54)
+					(name "GND" (effects (font (size 1 1))))
+					(number "7" (effects (font (size 1 1)))))
+			)
+		)
+			(symbol "MeshTag:XIAO-nRF52840-SMD"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no) (in_bom yes) (on_board yes)
+			(property "Reference" "U" (at 0 12.16 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "XIAO-nRF52840" (at 0 -12.16 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "MeshTag:XIAO-nRF52840-SMD" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(property "Description" "Seeed XIAO nRF52840 (castellated SMD)" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+			(symbol "XIAO-nRF52840-SMD_0_1"
+				(rectangle (start -10.16 10.16) (end 10.16 -10.16) (stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "XIAO-nRF52840-SMD_1_1"
+				(pin passive line (at -12.7 7.62 0) (length 2.54)
+					(name "D0" (effects (font (size 1.016 1.016))))
+					(number "1" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -12.7 5.08 0) (length 2.54)
+					(name "D1" (effects (font (size 1.016 1.016))))
+					(number "2" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -12.7 2.54 0) (length 2.54)
+					(name "D2" (effects (font (size 1.016 1.016))))
+					(number "3" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -12.7 0.0 0) (length 2.54)
+					(name "D3" (effects (font (size 1.016 1.016))))
+					(number "4" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -12.7 -2.54 0) (length 2.54)
+					(name "D4" (effects (font (size 1.016 1.016))))
+					(number "5" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -12.7 -5.08 0) (length 2.54)
+					(name "D5" (effects (font (size 1.016 1.016))))
+					(number "6" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -12.7 -7.62 0) (length 2.54)
+					(name "D6" (effects (font (size 1.016 1.016))))
+					(number "7" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 12.7 7.62 180) (length 2.54)
+					(name "D7" (effects (font (size 1.016 1.016))))
+					(number "8" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 12.7 5.08 180) (length 2.54)
+					(name "D8" (effects (font (size 1.016 1.016))))
+					(number "9" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 12.7 2.54 180) (length 2.54)
+					(name "D9" (effects (font (size 1.016 1.016))))
+					(number "10" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 12.7 0.0 180) (length 2.54)
+					(name "D10" (effects (font (size 1.016 1.016))))
+					(number "11" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 12.7 -2.54 180) (length 2.54)
+					(name "3V3_OUT" (effects (font (size 1.016 1.016))))
+					(number "12" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 12.7 -5.08 180) (length 2.54)
+					(name "GND" (effects (font (size 1.016 1.016))))
+					(number "13" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 12.7 -7.62 180) (length 2.54)
+					(name "VBUS" (effects (font (size 1.016 1.016))))
+					(number "14" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -3.81 12.7 270) (length 2.54)
+					(name "SWDIO" (effects (font (size 1.016 1.016))))
+					(number "15" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -1.27 12.7 270) (length 2.54)
+					(name "SWCLK" (effects (font (size 1.016 1.016))))
+					(number "16" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 1.27 12.7 270) (length 2.54)
+					(name "EN" (effects (font (size 1.016 1.016))))
+					(number "17" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 3.81 12.7 270) (length 2.54)
+					(name "GND" (effects (font (size 1.016 1.016))))
+					(number "18" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -3.81 -12.7 90) (length 2.54)
+					(name "VBAT" (effects (font (size 1.016 1.016))))
+					(number "19" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -1.27 -12.7 90) (length 2.54)
+					(name "GND" (effects (font (size 1.016 1.016))))
+					(number "20" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 1.27 -12.7 90) (length 2.54)
+					(name "NFC1" (effects (font (size 1.016 1.016))))
+					(number "21" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 3.81 -12.7 90) (length 2.54)
+					(name "NFC2" (effects (font (size 1.016 1.016))))
+					(number "22" (effects (font (size 1.016 1.016)))))
+			)
+		)
+	)
+	(symbol
+		(lib_id "MeshTag:XIAO-nRF52840-SMD")
+		(at 119.38 100.33 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "7ad1f7f2-6f66-4f63-895c-95d966dac4a5")
+		(property "Reference" "U1" (at 132.38 98.33 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "XIAO-nRF52840-SMD" (at 132.38 102.33 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 119.38 100.33 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "U1") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:Wio-SX1262")
+		(at 170.18 100.33 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "1cfd87fe-7701-4afd-8b08-4322d883c14e")
+		(property "Reference" "U2" (at 183.18 98.33 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "Wio-SX1262" (at 183.18 102.33 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 170.18 100.33 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "U2") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:C")
+		(at 95.25 134.62 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "58eae2fa-d9eb-4e48-b833-811063400ee7")
+		(property "Reference" "C1" (at 108.25 132.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "C" (at 108.25 136.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 95.25 134.62 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "C1") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:C")
+		(at 107.95 134.62 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "59a772b6-75b3-435b-9967-0e39e50b30a0")
+		(property "Reference" "C2" (at 120.95 132.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "C" (at 120.95 136.62 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 107.95 134.62 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "C2") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:C")
+		(at 149.86 139.7 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "a879d885-bfd5-42c3-a4d1-85c9ba291428")
+		(property "Reference" "C3" (at 162.86 137.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "C" (at 162.86 141.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 149.86 139.7 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "C3") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:C")
+		(at 163.83 139.7 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "554458b3-b6ed-4c41-973c-e1fc85c1358b")
+		(property "Reference" "C4" (at 176.83 137.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "C" (at 176.83 141.7 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 163.83 139.7 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "C4") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:NFC_Coil")
+		(at 146.05 118.11 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "d2080efa-1f93-47ae-ae4a-4e4fe005da75")
+		(property "Reference" "AE1" (at 159.05 116.11 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "NFC_Coil" (at 159.05 120.11 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 146.05 118.11 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "AE1") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:SW_Push")
+		(at 93.98 88.9 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "fa8fa8e0-4709-4374-a7c0-02f67d435343")
+		(property "Reference" "SW1" (at 106.98 86.9 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SW_Push" (at 106.98 90.9 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 93.98 88.9 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "SW1") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:SW_SPDT")
+		(at 93.98 154.94 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "8d72c8f4-0ca7-4bb0-bd7b-7252eea94f4d")
+		(property "Reference" "SW3" (at 106.98 152.94 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SW_SPDT" (at 106.98 156.94 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 93.98 154.94 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "SW3") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:LiPo_1S")
+		(at 76.2 165.1 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "ecdbe576-b204-4b0d-966e-c3eabdad6841")
+		(property "Reference" "BT1" (at 89.2 163.1 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "LiPo_1S" (at 89.2 167.1 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 76.2 165.1 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "BT1") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:TestPoint")
+		(at 190.5 118.11 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "93d004cf-3c97-4bbf-8c7b-95052ce42dd6")
+		(property "Reference" "TP1" (at 203.5 116.11 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "TestPoint" (at 203.5 120.11 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 190.5 118.11 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "TP1") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:TestPoint")
+		(at 190.5 123.19 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "c8642753-43dc-4969-bd14-38f30350caf0")
+		(property "Reference" "TP2" (at 203.5 121.19 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "TestPoint" (at 203.5 125.19 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 190.5 123.19 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "TP2") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:TestPoint")
+		(at 190.5 128.27 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "c793a2e6-2be1-4aa4-8b93-bf962dcbb5e1")
+		(property "Reference" "TP3" (at 203.5 126.27000000000001 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "TestPoint" (at 203.5 130.27 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 190.5 128.27 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "TP3") (unit 1))))
+	)
+	(symbol
+		(lib_id "MeshTag:TestPoint")
+		(at 190.5 133.35 0)
+		(unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "4c92cee3-b8df-4ae1-ac20-9e19e8f9cee5")
+		(property "Reference" "TP4" (at 203.5 131.35 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "TestPoint" (at 203.5 135.35 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "" (at 190.5 133.35 0) (effects (font (size 1.27 1.27)) hide))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "TP4") (unit 1))))
+	)
+	(global_label "BTN" (shape input) (at 106.68 92.71 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "5ac11f5d-7344-42f1-853f-19281efdd789"))
+	(global_label "LORA_DIO1" (shape input) (at 106.68 95.25 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "86466c18-806c-46ae-95aa-97f7fe8c087a"))
+	(global_label "LORA_RST" (shape input) (at 106.68 97.79 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "c824a36c-e566-410f-a302-ec280d1599b2"))
+	(global_label "LORA_BUSY" (shape input) (at 106.68 100.33 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "24b48fc0-f39e-4847-bb34-eab3748bc7fd"))
+	(global_label "LORA_NSS" (shape input) (at 106.68 102.87 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "dc4c2f0f-47aa-45cb-aab5-33e7a696ef87"))
+	(global_label "LORA_RXEN" (shape input) (at 106.68 105.41 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "cd3504b0-6daa-4bbd-96e4-cfe368ee18ae"))
+	(global_label "SPI_SCK" (shape input) (at 132.08 95.25 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "c523ad03-e169-414b-843b-ec3a5181f0fb"))
+	(global_label "SPI_MISO" (shape input) (at 132.08 97.79 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "81956408-382c-40cb-a616-326c51a27338"))
+	(global_label "SPI_MOSI" (shape input) (at 132.08 100.33 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "bac5e130-1c42-4ae5-84e9-77b34ecb7a85"))
+	(global_label "+3V3" (shape input) (at 132.08 102.87 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "5709c1a4-dbc1-40ec-8f2d-b6527f3140d9"))
+	(global_label "GND" (shape input) (at 132.08 105.41 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "0fd285a6-acce-496a-a5eb-b5d12cdb5ec9"))
+	(global_label "VBUS" (shape input) (at 132.08 107.95 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "49d37581-4726-4f4e-be8f-1404ae34e298"))
+	(global_label "VBATT" (shape input) (at 115.57 113.03 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "b93c06e2-92bc-4d34-9fca-6852c3b1f109"))
+	(global_label "GND" (shape input) (at 118.11 113.03 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "8790e103-4c72-454a-9a9c-6840a98046aa"))
+	(global_label "NFC1" (shape input) (at 120.65 113.03 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "c90329d7-3522-4591-b25c-cc9257833083"))
+	(global_label "NFC2" (shape input) (at 123.19 113.03 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "7339952a-c8a6-4f26-91d8-e580b81d59f6"))
+	(global_label "SWDIO" (shape input) (at 115.57 87.63 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "1e16e0ae-c3ea-471c-8bb2-d2c3cfab5d2d"))
+	(global_label "SWCLK" (shape input) (at 118.11 87.63 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "eb5a8ee3-c3fe-4f06-9864-414103aeb621"))
+	(global_label "RST_MCU" (shape input) (at 120.65 87.63 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "de0c7396-151f-4fee-8607-fdd7d390a443"))
+	(global_label "GND" (shape input) (at 123.19 87.63 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "6b438ba0-5c21-4eca-bece-5957e463ebf5"))
+	(global_label "LORA_RXEN" (shape input) (at 161.29 93.98 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "1d422adb-8ab2-42c8-8fb6-4e9c919f52ea"))
+	(global_label "SPI_MISO" (shape input) (at 161.29 96.52 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "28ab98d7-addc-4849-ad25-db9fa5d08b43"))
+	(global_label "SPI_MOSI" (shape input) (at 161.29 99.06 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "4ada83f8-9329-4cb7-9af1-f381698fd205"))
+	(global_label "SPI_SCK" (shape input) (at 161.29 101.6 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "97645736-be36-46c1-8d45-5abf7c90b67a"))
+	(global_label "LORA_RST" (shape input) (at 161.29 104.14 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "bbaa7a80-5d33-47eb-b90c-eabc6c85691b"))
+	(global_label "LORA_NSS" (shape input) (at 161.29 106.68 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "bd925a06-5c74-4952-892e-9a8579e6abf0"))
+	(global_label "GND" (shape input) (at 179.07 106.68 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "afd47019-776f-481a-9965-9d92e765bcff"))
+	(global_label "+3V3" (shape input) (at 179.07 104.14 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "c455bfd9-d8ab-437f-9808-96a9754e3ce8"))
+	(global_label "GND" (shape input) (at 179.07 99.06 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "3e586475-d01f-44e8-a05f-23b46358b244"))
+	(global_label "LORA_BUSY" (shape input) (at 179.07 96.52 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "5374465d-60e3-4294-9209-93cadd299c52"))
+	(global_label "LORA_DIO1" (shape input) (at 179.07 93.98 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "0fa646e2-130d-4d63-be86-3c14b1b025ba"))
+	(global_label "+3V3" (shape input) (at 95.25 130.81 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "52b9a5e3-7d5c-46ac-84a9-bdb3575694f3"))
+	(global_label "GND" (shape input) (at 95.25 138.43 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "c8868b05-87b2-4a3d-8bbc-621c524e1ac1"))
+	(global_label "+3V3" (shape input) (at 107.95 130.81 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "232da9a0-4afa-4add-8b6c-1f24172c61d3"))
+	(global_label "GND" (shape input) (at 107.95 138.43 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "08cbc551-eac7-4c5a-af46-1e1afb0eadb5"))
+	(global_label "NFC1" (shape input) (at 149.86 135.89 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "07d1046c-68d2-4c11-af1b-3f69388a6648"))
+	(global_label "GND" (shape input) (at 149.86 143.51 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "210be9f4-e9e5-4e06-8fef-e1fea8b938c3"))
+	(global_label "NFC2" (shape input) (at 163.83 135.89 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "dc9bb636-aff2-4f7f-b8a2-f64c1afe1139"))
+	(global_label "GND" (shape input) (at 163.83 143.51 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "a5860868-2f4f-45cb-812f-74797a2c3d38"))
+	(global_label "NFC1" (shape input) (at 139.7 118.11 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "97f25c2f-7f34-45fd-9c92-89aaa1c767c7"))
+	(global_label "NFC2" (shape input) (at 152.4 116.84 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "1fd35b4a-580f-4dac-ab26-e93ed7885987"))
+	(global_label "BTN" (shape input) (at 88.9 88.9 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "048df548-4b0b-40ef-9cb5-07c685219357"))
+	(global_label "GND" (shape input) (at 99.06 88.9 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "7ca4e85e-c20a-4356-b564-66f4bd2bc055"))
+	(global_label "VBATT" (shape input) (at 99.06 152.4 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "5d876013-4e20-43cb-a7da-3d0506f38bb4"))
+	(global_label "BAT_P" (shape input) (at 99.06 157.48 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "4c13ce59-c5b3-4de6-aae9-640d2588c0c3"))
+	(global_label "BAT_P" (shape input) (at 76.2 160.02 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "9e11c628-24c6-4987-b3b8-ce900ce0c7d7"))
+	(global_label "GND" (shape input) (at 76.2 170.18 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "72391596-818f-4383-b30b-efbb53f67d84"))
+	(global_label "RST_MCU" (shape input) (at 190.5 118.11 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "e999b3b1-3308-4622-82bd-2f82c068a2b3"))
+	(global_label "SWDIO" (shape input) (at 190.5 123.19 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "37c0ddd4-efcb-4c2e-afec-48591679cac9"))
+	(global_label "SWCLK" (shape input) (at 190.5 128.27 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "016c5f50-933a-4770-baaf-d80fde840550"))
+	(global_label "GND" (shape input) (at 190.5 133.35 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "64342edd-03fc-4667-9dd1-65d79060649c"))
+	(no_connect (at 179.07 101.6) (uuid "f7f3dc3b-abdb-4d92-a0b5-3cc6f984b0b2"))
+	(no_connect (at 88.9 154.94) (uuid "7958ef04-0db0-4926-8c6d-a5a79bffd9a3"))
+	(no_connect (at 106.68 107.95) (uuid "49c34fdc-a461-4146-8fe5-6e39cc147a7b"))
+	(no_connect (at 132.08 92.71) (uuid "e7088264-67fd-4cc1-8784-52dc5633227a"))
+	(symbol (lib_id "MeshTag:PWR_FLAG") (at 63.5 101.6 0) (unit 1)
+		(exclude_from_sim no)(in_bom no)(on_board yes)(dnp no)(uuid "4be00464-0a34-4787-8b8a-3ac9cb2e024f")
+		(property "Reference" "#FLG10160" (at 63.5 97.6 0)(effects (font (size 1.27 1.27)) hide))
+		(property "Value" "PWR_FLAG" (at 63.5 105.6 0)(effects (font (size 1.27 1.27))))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "#FLG10160")(unit 1)))))
+	(global_label "+3V3" (shape input) (at 63.5 101.6 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "a592dac2-c012-40a6-8cdb-a0b2117d5a15"))
+	(symbol (lib_id "MeshTag:PWR_FLAG") (at 63.5 114.3 0) (unit 1)
+		(exclude_from_sim no)(in_bom no)(on_board yes)(dnp no)(uuid "558ca8e4-ce84-4bae-a045-1fd51ea84acb")
+		(property "Reference" "#FLG11430" (at 63.5 110.3 0)(effects (font (size 1.27 1.27)) hide))
+		(property "Value" "PWR_FLAG" (at 63.5 118.3 0)(effects (font (size 1.27 1.27))))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "#FLG11430")(unit 1)))))
+	(global_label "GND" (shape input) (at 63.5 114.3 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "77d90e1b-4188-42a2-bdb3-e13e85202e20"))
+	(symbol (lib_id "MeshTag:PWR_FLAG") (at 63.5 125.73 0) (unit 1)
+		(exclude_from_sim no)(in_bom no)(on_board yes)(dnp no)(uuid "eeb875a7-cd5e-48b2-84a7-8cbe161dd9a1")
+		(property "Reference" "#FLG12573" (at 63.5 121.73 0)(effects (font (size 1.27 1.27)) hide))
+		(property "Value" "PWR_FLAG" (at 63.5 129.73000000000002 0)(effects (font (size 1.27 1.27))))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "#FLG12573")(unit 1)))))
+	(global_label "VBATT" (shape input) (at 63.5 125.73 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "ca4faa1c-5c28-4bfd-bd8d-8311190dce32"))
+	(symbol (lib_id "MeshTag:PWR_FLAG") (at 63.5 138.43 0) (unit 1)
+		(exclude_from_sim no)(in_bom no)(on_board yes)(dnp no)(uuid "fecdef3c-5ba3-4fdf-9641-7b142a108a3a")
+		(property "Reference" "#FLG13843" (at 63.5 134.43 0)(effects (font (size 1.27 1.27)) hide))
+		(property "Value" "PWR_FLAG" (at 63.5 142.43 0)(effects (font (size 1.27 1.27))))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "#FLG13843")(unit 1)))))
+	(global_label "VBUS" (shape input) (at 63.5 138.43 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "8342b8d4-b395-477f-bbee-ad3ef6bf8079"))
+	(symbol (lib_id "MeshTag:PWR_FLAG") (at 63.5 149.86 0) (unit 1)
+		(exclude_from_sim no)(in_bom no)(on_board yes)(dnp no)(uuid "c7ddd4a6-406f-42fd-b6ca-be0c9d1b6f97")
+		(property "Reference" "#FLG14986" (at 63.5 145.86 0)(effects (font (size 1.27 1.27)) hide))
+		(property "Value" "PWR_FLAG" (at 63.5 153.86 0)(effects (font (size 1.27 1.27))))
+		(instances (project "MeshTag" (path "/09344dd5-44d6-458a-9817-474d6d54e542" (reference "#FLG14986")(unit 1)))))
+	(global_label "BAT_P" (shape input) (at 63.5 149.86 0)
+		(effects (font (size 1.27 1.27)) (justify left)) (uuid "3ce99ab1-fdd9-4919-9c93-7fc97665183f"))
+	(sheet_instances (path "/" (page "1")))
+)

@@ -1,0 +1,4 @@
+(version 1)
+(rule "NFC coil net-tie: allow NFC1/NFC2 to join"
+  (condition "A.NetClass == 'Default' && A.insideArea('NFC_COIL_KEEPOUT')")
+  (constraint clearance (min 0mm)))
