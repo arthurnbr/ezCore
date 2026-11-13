@@ -46,17 +46,26 @@ meshtag/
     ├── lib/
     │   ├── MeshTag.kicad_sym  TOUS les symboles (projet autonome)
     │   ├── MeshTag.pretty/    TOUTES les empreintes (projet autonome)
-    │   └── 3dmodels/
+    │   └── 3dmodels/          modèles 3D STEP (XIAO, Wio, pogo, batterie)
     ├── tools/
+    │   ├── gen_sch.py         génère le schéma lisible (blocs + stubs + notes)
     │   ├── build_pcb.py       place les empreintes, dessine le contour, zones
     │   └── route_pcb.sh       DSN → Freerouting → import SES → zones → DRC
     └── fab/
         ├── gerbers/           Gerbers + perçage (Protel + gbrjob)
+        ├── schematic.png      rendu du schéma
+        ├── render_3d_top.png  rendu 3D
         └── BOM.csv
 ```
 
-Toutes les bibliothèques (symboles, empreintes, modèle 3D) sont **copiées dans le
-projet** : rien ne dépend des bibliothèques système.
+Toutes les bibliothèques (symboles, empreintes, **modèles 3D**) sont **copiées
+dans le projet** : rien ne dépend des bibliothèques système. Chaque empreinte de
+composant a un modèle 3D (STEP généré aux bonnes cotes pour XIAO / Wio / pogo /
+batterie, STEP KiCad standard pour les condensateurs et interrupteurs). Les
+empreintes sans 3D (bobine NFC, pastilles batterie, fiducials, test points) sont
+du cuivre/pads, sans pièce physique.
+
+Pour régénérer le schéma : `python3 tools/gen_sch.py` (ERC 0/0).
 
 ## Régénérer le PCB
 

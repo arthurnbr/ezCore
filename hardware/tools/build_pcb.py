@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Generate MeshTag/ezCore V2 (circular keychain) MeshTag.kicad_pcb from the
-netlist + local footprints.
+"""Generate ezCore V2 (circular, home-etch) MeshTag.kicad_pcb from the netlist +
+local footprints.
 
-Round board Ø48 mm with a keychain ear at top. XIAO in the centre, Wio-SX1262 at
-the bottom edge (IPEX toward the rim, LoRa FPC wraps the inner wall), round NFC
-coil under the XIAO, pogo-4P + button + slide switch + battery pads on the back.
+Plain round board Ø48 mm. XIAO in the centre, Wio-SX1262 at the bottom edge (IPEX
+toward the rim, LoRa FPC wraps the inner wall), round NFC coil under the XIAO,
+pogo-4P + button + slide switch + battery pads on the back. The attachment point
+(keychain) is handled by the enclosure, not the PCB.
 
-Pipeline: `build_pcb.py` places parts, draws the round outline + ear, writes the
+Pipeline: `build_pcb.py` places parts, draws the round outline, writes the
 NFC-coil keep-out and the GND-net code; `route_pcb.sh` then autoroutes and calls
 `build_pcb.py finalize` to add the BLE/GND zones and fill.
 """
@@ -24,7 +25,7 @@ def VM(x, y): return pcbnew.VECTOR2I(MM(x), MM(y))
 DIA = 48.0                 # board diameter
 R = DIA / 2.0              # radius
 CX, CY = 130.0, 110.0      # board centre in workspace
-EAR_ANG = -90.0            # keychain ear at top (−Y)
+
 
 # ---- component -> footprint ----
 REFFP = {
@@ -145,37 +146,17 @@ def main():
 
 
 def draw_outline(board):
-    """Ø48 board with a keychain ear at top, as ONE closed Edge.Cuts contour.
+    """Plain round board Ø48 as a single Edge.Cuts circle.
 
-    Two arcs: the main circle (the long way, right intersection -> bottom -> left
-    intersection) and the ear circle (left -> ear top -> right). A real NPTH hole
-    sits in the ear."""
-    ear_r = 4.0
-    ear_cy = CY - R - 2.0                       # ear centre above the rim
-    dc = abs(CY - ear_cy)                        # centre-to-centre distance
-    a = (R ** 2 - ear_r ** 2 + dc ** 2) / (2 * dc)
-    h = math.sqrt(R ** 2 - a ** 2)
-    py = CY - a
-    L = (CX - h, py)                             # left intersection
-    Rr = (CX + h, py)                            # right intersection
-
-    def arc(start, mid, end):
-        s = pcbnew.PCB_SHAPE(board)
-        s.SetShape(pcbnew.SHAPE_T_ARC)
-        s.SetArcGeometry(VM(*start), VM(*mid), VM(*end))
-        s.SetLayer(pcbnew.Edge_Cuts); s.SetWidth(MM(0.1)); board.Add(s)
-
-    # main circle arc: right intersection -> bottom -> left intersection
-    arc(Rr, (CX, CY + R), L)
-    # ear arc: left intersection -> ear top -> right intersection
-    arc(L, (CX, ear_cy - ear_r), Rr)
-
-    # real NPTH keychain hole in the ear
-    mh = pcbnew.FootprintLoad(PRETTY, "MountingHole_3.2mm_M3")
-    if mh is not None:
-        board.Add(mh)
-        mh.SetReference("H1")
-        mh.SetPosition(VM(CX, ear_cy))
+    No keychain ear or hole: the attachment point is handled on the enclosure, not
+    the PCB (per project decision)."""
+    c = pcbnew.PCB_SHAPE(board)
+    c.SetShape(pcbnew.SHAPE_T_CIRCLE)
+    c.SetCenter(VM(CX, CY))
+    c.SetEnd(VM(CX + R, CY))
+    c.SetLayer(pcbnew.Edge_Cuts)
+    c.SetWidth(MM(0.1))
+    board.Add(c)
 
 
 def zone_sexpr(name, netcode, netname, layers, pts, keepout=False):

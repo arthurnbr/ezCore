@@ -13,4 +13,8 @@
   (pad "1" smd roundrect (at -1.8 0) (size 1.6 2.4) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.2) (uuid "bp1"))
   (pad "2" smd roundrect (at 1.8 0) (size 1.6 2.4) (layers "F.Cu" "F.Mask" "F.Paste") (roundrect_rratio 0.2) (uuid "bp2"))
   (embedded_fonts no)
+  (model "${KIPRJMOD}/lib/3dmodels/Batt_WirePads_2x.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0)))
 )

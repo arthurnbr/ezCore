@@ -426,4 +426,8 @@
 		(uuid "ae670273-d1f8-43e0-9bf0-a2bbbf7d4ee6")
 	)
 	(embedded_fonts no)
+  (model "${KIPRJMOD}/lib/3dmodels/XIAO-nRF52840-SMD.step"
+    (offset (xyz 8.918 9.966 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0)))
 )

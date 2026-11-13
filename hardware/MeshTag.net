@@ -1,7 +1,7 @@
 (export (version "E")
   (design
     (source "/home/arthur/Documents/meshtag/hardware/MeshTag.kicad_sch")
-    (date "2026-11-13T14:36:26+0100")
+    (date "2026-11-13T15:09:04+0100")
     (tool "Eeschema 9.0.2+dfsg-1")
     (sheet (number "1") (name "/") (tstamps "/")
       (title_block
@@ -30,7 +30,7 @@
       (property (name "Sheetname") (value ""))
       (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "61b0b3ff-f2d2-4fb5-8730-3a6ed7d85ecb"))
+      (tstamps "805964ed-3f3a-4131-9db5-6eb517dc709d"))
     (comp (ref "BT1")
       (value "LiPo_1S")
       (fields
@@ -41,7 +41,7 @@
       (property (name "Sheetname") (value ""))
       (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "842a3d24-4f61-416b-9347-0e9b1b7d08fd"))
+      (tstamps "804e78eb-4c67-417b-bc53-5121e6703e82"))
     (comp (ref "C1")
       (value "C")
       (fields
@@ -54,7 +54,7 @@
       (property (name "ki_keywords") (value "cap capacitor"))
       (property (name "ki_fp_filters") (value "C_*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "bc098e10-8042-41e5-9399-baa914f1910c"))
+      (tstamps "bc116f48-9172-4244-abc2-60fa3bdaa1a6"))
     (comp (ref "C2")
       (value "C")
       (fields
@@ -67,7 +67,7 @@
       (property (name "ki_keywords") (value "cap capacitor"))
       (property (name "ki_fp_filters") (value "C_*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "a4e1a8e8-5b87-4d05-8c99-0e8675944b85"))
+      (tstamps "5c6c454d-9a15-4d40-9d46-bdbfccb2317f"))
     (comp (ref "C3")
       (value "C")
       (fields
@@ -80,7 +80,7 @@
       (property (name "ki_keywords") (value "cap capacitor"))
       (property (name "ki_fp_filters") (value "C_*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "87eb4142-c508-414d-8fec-5d8797104484"))
+      (tstamps "1e079488-6dbd-419c-a316-e3f08c2d7347"))
     (comp (ref "C4")
       (value "C")
       (fields
@@ -93,7 +93,7 @@
       (property (name "ki_keywords") (value "cap capacitor"))
       (property (name "ki_fp_filters") (value "C_*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "8e4b955f-948b-4600-ae6a-e0e8db0dfc61"))
+      (tstamps "e817f5b0-5be7-4117-a8e9-ba4a8018b358"))
     (comp (ref "C5")
       (value "C")
       (fields
@@ -106,7 +106,7 @@
       (property (name "ki_keywords") (value "cap capacitor"))
       (property (name "ki_fp_filters") (value "C_*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "e7b48b84-8400-409c-8c1e-c7a37405001e"))
+      (tstamps "ca1b336d-7d9e-45f1-9cd6-de9bccd90772"))
     (comp (ref "J5")
       (value "Pogo_4P")
       (fields
@@ -117,7 +117,7 @@
       (property (name "Sheetname") (value ""))
       (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "e625a5a1-57b7-4753-be0a-155976199033"))
+      (tstamps "7335899b-12fd-433b-9e2b-dfee0fe95d86"))
     (comp (ref "SW1")
       (value "SW_Push")
       (fields
@@ -129,7 +129,7 @@
       (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
       (property (name "ki_keywords") (value "switch normally-open pushbutton push-button"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "20095c36-bfe3-4c3e-aa30-97dad5999fac"))
+      (tstamps "17efdc71-b526-499b-bb56-c9760cd9e051"))
     (comp (ref "SW3")
       (value "SW_SPDT")
       (fields
@@ -141,7 +141,7 @@
       (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
       (property (name "ki_keywords") (value "switch single-pole double-throw spdt ON-ON"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "55649ca9-b4b9-4359-a386-1f9db802c8c7"))
+      (tstamps "aa914757-49b6-4ade-912e-25e93397d019"))
     (comp (ref "TP1")
       (value "TestPoint")
       (fields
@@ -154,7 +154,7 @@
       (property (name "ki_keywords") (value "test point tp"))
       (property (name "ki_fp_filters") (value "Pin* Test*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "130cde88-c274-407f-9a9e-917a65daa5fc"))
+      (tstamps "c8b213ee-2ffd-4c50-b70e-f084c9c34147"))
     (comp (ref "TP2")
       (value "TestPoint")
       (fields
@@ -167,7 +167,7 @@
       (property (name "ki_keywords") (value "test point tp"))
       (property (name "ki_fp_filters") (value "Pin* Test*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "a30febfd-4890-4bd2-8bc3-2b4d54831c68"))
+      (tstamps "37a6af87-ddb8-44b5-9880-932889f00f60"))
     (comp (ref "TP3")
       (value "TestPoint")
       (fields
@@ -180,7 +180,7 @@
       (property (name "ki_keywords") (value "test point tp"))
       (property (name "ki_fp_filters") (value "Pin* Test*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "c84f3f21-b9e5-4a36-bec0-71a6043c2c10"))
+      (tstamps "2248b6c1-adcb-41a0-93bc-4cf5acd7ee9d"))
     (comp (ref "TP4")
       (value "TestPoint")
       (fields
@@ -193,7 +193,7 @@
       (property (name "ki_keywords") (value "test point tp"))
       (property (name "ki_fp_filters") (value "Pin* Test*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "d4d6b6a0-f0cf-4ddf-acf5-e4c174123fa2"))
+      (tstamps "369bbf02-d6cf-4957-90e5-f87f4578a333"))
     (comp (ref "TP5")
       (value "TestPoint")
       (fields
@@ -206,7 +206,7 @@
       (property (name "ki_keywords") (value "test point tp"))
       (property (name "ki_fp_filters") (value "Pin* Test*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "03bc25d3-1170-4ffb-be21-e9e992fd19f0"))
+      (tstamps "dd9e18ee-4fb0-44f9-8122-5fa4cd0ee3f4"))
     (comp (ref "TP6")
       (value "TestPoint")
       (fields
@@ -219,7 +219,7 @@
       (property (name "ki_keywords") (value "test point tp"))
       (property (name "ki_fp_filters") (value "Pin* Test*"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "c26b02de-2bb2-4641-b49f-78db17b968c6"))
+      (tstamps "5132db3a-77be-4728-a8a4-e97babc0fb79"))
     (comp (ref "U1")
       (value "XIAO-nRF52840-SMD")
       (fields
@@ -230,7 +230,7 @@
       (property (name "Sheetname") (value ""))
       (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "cec1a5c4-3aae-4b96-96ee-be16ef4cf315"))
+      (tstamps "896a73b7-4462-489d-b201-b679dc8615f9"))
     (comp (ref "U2")
       (value "Wio-SX1262")
       (fields
@@ -241,7 +241,7 @@
       (property (name "Sheetname") (value ""))
       (property (name "Sheetfile") (value "MeshTag.kicad_sch"))
       (sheetpath (names "/") (tstamps "/"))
-      (tstamps "cd4eb65b-cfa6-44fd-a352-d903bfdff24a")))
+      (tstamps "6f17be1c-772f-41fd-809f-ef81e2a3d745")))
   (libparts
     (libpart (lib "MeshTag") (part "C")
       (description "Unpolarized capacitor")
