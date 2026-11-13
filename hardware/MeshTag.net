@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/home/arthur/Documents/ezCore/hardware/MeshTag.kicad_sch")
-		(date "2026-11-13T22:01:15")
+		(date "2026-11-13T23:33:13")
 		(tool "Eeschema 10.0.7")
 		(sheet
 			(number "1")
@@ -148,9 +148,15 @@
 		)
 		(comp
 			(ref "C1")
-			(value "C")
+			(value "10uF 6.3V X5R")
 			(footprint "MeshTag:C_0402_1005Metric")
 			(fields
+				(field
+					(name "LCSC") "C15525")
+				(field
+					(name "MPN") "CL05A106MQ5NUNC")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
 				(field
 					(name "Footprint") "MeshTag:C_0402_1005Metric")
 				(field
@@ -164,6 +170,18 @@
 				(lib "MeshTag")
 				(part "C")
 				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "LCSC")
+				(value "C15525")
+			)
+			(property
+				(name "MPN")
+				(value "CL05A106MQ5NUNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
 			)
 			(property
 				(name "Sheetname")
@@ -202,9 +220,15 @@
 		)
 		(comp
 			(ref "C2")
-			(value "C")
+			(value "100nF 16V X7R")
 			(footprint "MeshTag:C_0402_1005Metric")
 			(fields
+				(field
+					(name "LCSC") "C1525")
+				(field
+					(name "MPN") "CL05B104KO5NNNC")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
 				(field
 					(name "Footprint") "MeshTag:C_0402_1005Metric")
 				(field
@@ -218,6 +242,18 @@
 				(lib "MeshTag")
 				(part "C")
 				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "LCSC")
+				(value "C1525")
+			)
+			(property
+				(name "MPN")
+				(value "CL05B104KO5NNNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
 			)
 			(property
 				(name "Sheetname")
@@ -256,9 +292,15 @@
 		)
 		(comp
 			(ref "C3")
-			(value "C")
+			(value "47pF 50V C0G")
 			(footprint "MeshTag:C_0402_1005Metric")
 			(fields
+				(field
+					(name "LCSC") "C1567")
+				(field
+					(name "MPN") "0402CG470J500NT")
+				(field
+					(name "Manufacturer") "FH (Guangdong Fenghua)")
 				(field
 					(name "Footprint") "MeshTag:C_0402_1005Metric")
 				(field
@@ -272,6 +314,18 @@
 				(lib "MeshTag")
 				(part "C")
 				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "LCSC")
+				(value "C1567")
+			)
+			(property
+				(name "MPN")
+				(value "0402CG470J500NT")
+			)
+			(property
+				(name "Manufacturer")
+				(value "FH (Guangdong Fenghua)")
 			)
 			(property
 				(name "Sheetname")
@@ -310,9 +364,15 @@
 		)
 		(comp
 			(ref "C4")
-			(value "C")
+			(value "47pF 50V C0G")
 			(footprint "MeshTag:C_0402_1005Metric")
 			(fields
+				(field
+					(name "LCSC") "C1567")
+				(field
+					(name "MPN") "0402CG470J500NT")
+				(field
+					(name "Manufacturer") "FH (Guangdong Fenghua)")
 				(field
 					(name "Footprint") "MeshTag:C_0402_1005Metric")
 				(field
@@ -326,6 +386,18 @@
 				(lib "MeshTag")
 				(part "C")
 				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "LCSC")
+				(value "C1567")
+			)
+			(property
+				(name "MPN")
+				(value "0402CG470J500NT")
+			)
+			(property
+				(name "Manufacturer")
+				(value "FH (Guangdong Fenghua)")
 			)
 			(property
 				(name "Sheetname")
@@ -364,9 +436,15 @@
 		)
 		(comp
 			(ref "C5")
-			(value "C")
+			(value "100nF 16V X7R")
 			(footprint "MeshTag:C_0402_1005Metric")
 			(fields
+				(field
+					(name "LCSC") "C1525")
+				(field
+					(name "MPN") "CL05B104KO5NNNC")
+				(field
+					(name "Manufacturer") "Samsung Electro-Mechanics")
 				(field
 					(name "Footprint") "MeshTag:C_0402_1005Metric")
 				(field
@@ -380,6 +458,18 @@
 				(lib "MeshTag")
 				(part "C")
 				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "LCSC")
+				(value "C1525")
+			)
+			(property
+				(name "MPN")
+				(value "CL05B104KO5NNNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung Electro-Mechanics")
 			)
 			(property
 				(name "Sheetname")
@@ -418,11 +508,17 @@
 		)
 		(comp
 			(ref "D1")
-			(value "LED")
-			(footprint "MeshTag:LED_0402")
+			(value "XL-1005SURC (rouge)")
+			(footprint "MeshTag:LED_0402_Red_XL-1005SURC")
 			(fields
 				(field
-					(name "Footprint") "MeshTag:LED_0402")
+					(name "LCSC") "C25503345")
+				(field
+					(name "MPN") "XL-1005SURC")
+				(field
+					(name "Manufacturer") "XINGLIGHT")
+				(field
+					(name "Footprint") "MeshTag:LED_0402_Red_XL-1005SURC")
 				(field
 					(name "Datasheet")
 				)
@@ -434,6 +530,18 @@
 				(lib "MeshTag")
 				(part "LED")
 				(description "Light emitting diode")
+			)
+			(property
+				(name "LCSC")
+				(value "C25503345")
+			)
+			(property
+				(name "MPN")
+				(value "XL-1005SURC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "XINGLIGHT")
 			)
 			(property
 				(name "Sheetname")
@@ -472,11 +580,17 @@
 		)
 		(comp
 			(ref "D2")
-			(value "LED")
-			(footprint "MeshTag:LED_0402")
+			(value "XL-1005UGC (vert)")
+			(footprint "MeshTag:LED_0402_Green_XL-1005UGC")
 			(fields
 				(field
-					(name "Footprint") "MeshTag:LED_0402")
+					(name "LCSC") "C965793")
+				(field
+					(name "MPN") "XL-1005UGC")
+				(field
+					(name "Manufacturer") "XINGLIGHT")
+				(field
+					(name "Footprint") "MeshTag:LED_0402_Green_XL-1005UGC")
 				(field
 					(name "Datasheet")
 				)
@@ -488,6 +602,18 @@
 				(lib "MeshTag")
 				(part "LED")
 				(description "Light emitting diode")
+			)
+			(property
+				(name "LCSC")
+				(value "C965793")
+			)
+			(property
+				(name "MPN")
+				(value "XL-1005UGC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "XINGLIGHT")
 			)
 			(property
 				(name "Sheetname")
@@ -526,11 +652,19 @@
 		)
 		(comp
 			(ref "J5")
-			(value "Pogo_4P")
-			(footprint "MeshTag:Pogo_4P_2.54mm")
+			(value "YZT0675-20048-04025-01")
+			(footprint "MeshTag:MagPogo_4P_P2.50mm_YZT0675")
 			(fields
 				(field
-					(name "Footprint") "MeshTag:Pogo_4P_2.54mm")
+					(name "LCSC") "C5126846")
+				(field
+					(name "MPN") "YZT0675-20048-04025-01")
+				(field
+					(name "Manufacturer") "Xinyangze")
+				(field
+					(name "Datasheet_URL") "https://www.lcsc.com/datasheet/lcsc_datasheet_2411220221_Xinyangze-YZT0675-20048-04025-01_C5126846.pdf")
+				(field
+					(name "Footprint") "MeshTag:MagPogo_4P_P2.50mm_YZT0675")
 				(field
 					(name "Datasheet")
 				)
@@ -542,6 +676,22 @@
 				(lib "MeshTag")
 				(part "Pogo_4P")
 				(description "4-pin pogo charge+USB")
+			)
+			(property
+				(name "LCSC")
+				(value "C5126846")
+			)
+			(property
+				(name "MPN")
+				(value "YZT0675-20048-04025-01")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Xinyangze")
+			)
+			(property
+				(name "Datasheet_URL")
+				(value "https://www.lcsc.com/datasheet/lcsc_datasheet_2411220221_Xinyangze-YZT0675-20048-04025-01_C5126846.pdf")
 			)
 			(property
 				(name "Sheetname")
@@ -578,9 +728,15 @@
 		)
 		(comp
 			(ref "R1")
-			(value "R")
+			(value "470R 1%")
 			(footprint "MeshTag:R_0402")
 			(fields
+				(field
+					(name "LCSC") "C25117")
+				(field
+					(name "MPN") "0402WGF4700TCE")
+				(field
+					(name "Manufacturer") "UNI-ROYAL")
 				(field
 					(name "Footprint") "MeshTag:R_0402")
 				(field
@@ -594,6 +750,18 @@
 				(lib "MeshTag")
 				(part "R")
 				(description "Resistor")
+			)
+			(property
+				(name "LCSC")
+				(value "C25117")
+			)
+			(property
+				(name "MPN")
+				(value "0402WGF4700TCE")
+			)
+			(property
+				(name "Manufacturer")
+				(value "UNI-ROYAL")
 			)
 			(property
 				(name "Sheetname")
@@ -632,9 +800,15 @@
 		)
 		(comp
 			(ref "R2")
-			(value "R")
+			(value "470R 1%")
 			(footprint "MeshTag:R_0402")
 			(fields
+				(field
+					(name "LCSC") "C25117")
+				(field
+					(name "MPN") "0402WGF4700TCE")
+				(field
+					(name "Manufacturer") "UNI-ROYAL")
 				(field
 					(name "Footprint") "MeshTag:R_0402")
 				(field
@@ -648,6 +822,18 @@
 				(lib "MeshTag")
 				(part "R")
 				(description "Resistor")
+			)
+			(property
+				(name "LCSC")
+				(value "C25117")
+			)
+			(property
+				(name "MPN")
+				(value "0402WGF4700TCE")
+			)
+			(property
+				(name "Manufacturer")
+				(value "UNI-ROYAL")
 			)
 			(property
 				(name "Sheetname")
@@ -686,11 +872,17 @@
 		)
 		(comp
 			(ref "SW1")
-			(value "SW_Push")
-			(footprint "MeshTag:SW_Push_1P1T_NO_CK_KMR2")
+			(value "KMR221GLFS")
+			(footprint "MeshTag:SW_Push_1P1T-SH_NO_CK_KMR2xxG")
 			(fields
 				(field
-					(name "Footprint") "MeshTag:SW_Push_1P1T_NO_CK_KMR2")
+					(name "LCSC") "C72443")
+				(field
+					(name "MPN") "KMR221GLFS")
+				(field
+					(name "Manufacturer") "C&K")
+				(field
+					(name "Footprint") "MeshTag:SW_Push_1P1T-SH_NO_CK_KMR2xxG")
 				(field
 					(name "Datasheet")
 				)
@@ -702,6 +894,18 @@
 				(lib "MeshTag")
 				(part "SW_Push")
 				(description "Push button switch, generic, two pins")
+			)
+			(property
+				(name "LCSC")
+				(value "C72443")
+			)
+			(property
+				(name "MPN")
+				(value "KMR221GLFS")
+			)
+			(property
+				(name "Manufacturer")
+				(value "C&K")
 			)
 			(property
 				(name "Sheetname")
@@ -736,9 +940,15 @@
 		)
 		(comp
 			(ref "SW3")
-			(value "SW_SPDT")
+			(value "PCM12SMTR")
 			(footprint "MeshTag:SW_SPDT_PCM12")
 			(fields
+				(field
+					(name "LCSC") "C221841")
+				(field
+					(name "MPN") "PCM12SMTR")
+				(field
+					(name "Manufacturer") "C&K")
 				(field
 					(name "Footprint") "MeshTag:SW_SPDT_PCM12")
 				(field
@@ -752,6 +962,18 @@
 				(lib "MeshTag")
 				(part "SW_SPDT")
 				(description "Switch, single pole double throw")
+			)
+			(property
+				(name "LCSC")
+				(value "C221841")
+			)
+			(property
+				(name "MPN")
+				(value "PCM12SMTR")
+			)
+			(property
+				(name "Manufacturer")
+				(value "C&K")
 			)
 			(property
 				(name "Sheetname")
@@ -1099,6 +1321,12 @@
 			(footprint "MeshTag:XIAO-nRF52840-SMD")
 			(fields
 				(field
+					(name "MPN") "102010448")
+				(field
+					(name "Manufacturer") "Seeed Studio")
+				(field
+					(name "JLC") "DNP - soudé à la main (non assemblé par JLC)")
+				(field
 					(name "Footprint") "MeshTag:XIAO-nRF52840-SMD")
 				(field
 					(name "Datasheet")
@@ -1111,6 +1339,18 @@
 				(lib "MeshTag")
 				(part "XIAO-nRF52840-SMD")
 				(description "Seeed XIAO nRF52840 (castellated SMD)")
+			)
+			(property
+				(name "MPN")
+				(value "102010448")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Seeed Studio")
+			)
+			(property
+				(name "JLC")
+				(value "DNP - soudé à la main (non assemblé par JLC)")
 			)
 			(property
 				(name "Sheetname")
@@ -1205,6 +1445,12 @@
 			(footprint "MeshTag:Wio-SX1262-Module")
 			(fields
 				(field
+					(name "MPN") "114993390")
+				(field
+					(name "Manufacturer") "Seeed Studio")
+				(field
+					(name "JLC") "DNP - soudé à la main (non assemblé par JLC)")
+				(field
 					(name "Footprint") "MeshTag:Wio-SX1262-Module")
 				(field
 					(name "Datasheet")
@@ -1217,6 +1463,18 @@
 				(lib "MeshTag")
 				(part "Wio-SX1262")
 				(description "Seeed Wio-SX1262 LoRa module")
+			)
+			(property
+				(name "MPN")
+				(value "114993390")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Seeed Studio")
+			)
+			(property
+				(name "JLC")
+				(value "DNP - soudé à la main (non assemblé par JLC)")
 			)
 			(property
 				(name "Sheetname")

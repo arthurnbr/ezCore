@@ -1,3 +1,7 @@
+> **Obsolète (V.02)** : cet audit concerne V.01. Les empreintes et modèles 3D ont été
+> remplacés (sources constructeur / LCSC / Seeed, tous copiés dans `hardware/lib/3dmodels`).
+> Voir le tableau « Provenance des modèles 3D » et « Fabrication JLCPCB » du `README.md`.
+
 # Audit des footprints — projet ezCore / MeshTag
 
 Audit réalisé le 2026-11-13. KiCad installé : **9.0.2**. Racine des modèles 3D vérifiée :

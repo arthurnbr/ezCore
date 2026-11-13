@@ -4387,7 +4387,7 @@
 				)
 			)
 		)
-		(property "Value" "Pogo_4P"
+		(property "Value" "YZT0675-20048-04025-01"
 			(at 289.56 172.02 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4398,7 +4398,7 @@
 				(justify bottom)
 			)
 		)
-		(property "Footprint" "MeshTag:Pogo_4P_2.54mm"
+		(property "Footprint" "MeshTag:MagPogo_4P_P2.50mm_YZT0675"
 			(at 289.56 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -4421,6 +4421,50 @@
 		)
 		(property "Description" ""
 			(at 289.56 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C5126846"
+			(at 289.56 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "YZT0675-20048-04025-01"
+			(at 289.56 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Xinyangze"
+			(at 289.56 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet_URL" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411220221_Xinyangze-YZT0675-20048-04025-01_C5126846.pdf"
+			(at 289.56 160.02 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4620,7 +4664,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "10uF 6.3V X5R"
 			(at 69.85 161.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4654,6 +4698,39 @@
 		)
 		(property "Description" ""
 			(at 69.85 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C15525"
+			(at 69.85 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05A106MQ5NUNC"
+			(at 69.85 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 69.85 149.86 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4698,7 +4775,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "100nF 16V X7R"
 			(at 85.09 161.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4732,6 +4809,39 @@
 		)
 		(property "Description" ""
 			(at 85.09 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1525"
+			(at 85.09 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05B104KO5NNNC"
+			(at 85.09 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 85.09 149.86 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4810,6 +4920,39 @@
 		)
 		(property "Description" ""
 			(at 149.86 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "102010448"
+			(at 149.86 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Seeed Studio"
+			(at 149.86 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC" "DNP - soudé à la main (non assemblé par JLC)"
+			(at 149.86 110.49 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4989,7 +5132,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "47pF 50V C0G"
 			(at 180.34 197.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5023,6 +5166,39 @@
 		)
 		(property "Description" ""
 			(at 180.34 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1567"
+			(at 180.34 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402CG470J500NT"
+			(at 180.34 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FH (Guangdong Fenghua)"
+			(at 180.34 185.42 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5067,7 +5243,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_SPDT"
+		(property "Value" "PCM12SMTR"
 			(at 95.25 197.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5101,6 +5277,39 @@
 		)
 		(property "Description" ""
 			(at 95.25 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C221841"
+			(at 95.25 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PCM12SMTR"
+			(at 95.25 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "C&K"
+			(at 95.25 185.42 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5223,7 +5432,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "470R 1%"
 			(at 54.61 122.49 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5257,6 +5466,39 @@
 		)
 		(property "Description" ""
 			(at 54.61 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25117"
+			(at 54.61 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF4700TCE"
+			(at 54.61 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 54.61 110.49 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5410,6 +5652,39 @@
 		)
 		(property "Description" ""
 			(at 234.95 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "114993390"
+			(at 234.95 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Seeed Studio"
+			(at 234.95 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLC" "DNP - soudé à la main (non assemblé par JLC)"
+			(at 234.95 110.49 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5785,7 +6060,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "KMR221GLFS"
 			(at 69.85 86.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5796,7 +6071,7 @@
 				(justify bottom)
 			)
 		)
-		(property "Footprint" "MeshTag:SW_Push_1P1T_NO_CK_KMR2"
+		(property "Footprint" "MeshTag:SW_Push_1P1T-SH_NO_CK_KMR2xxG"
 			(at 69.85 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -5819,6 +6094,39 @@
 		)
 		(property "Description" ""
 			(at 69.85 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C72443"
+			(at 69.85 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "KMR221GLFS"
+			(at 69.85 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "C&K"
+			(at 69.85 74.93 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5863,7 +6171,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "100nF 16V X7R"
 			(at 261.62 161.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5897,6 +6205,39 @@
 		)
 		(property "Description" ""
 			(at 261.62 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1525"
+			(at 261.62 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05B104KO5NNNC"
+			(at 261.62 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 261.62 149.86 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6015,7 +6356,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "470R 1%"
 			(at 69.85 122.49 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6049,6 +6390,39 @@
 		)
 		(property "Description" ""
 			(at 69.85 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25117"
+			(at 69.85 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF4700TCE"
+			(at 69.85 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 69.85 110.49 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6093,7 +6467,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "XL-1005SURC (rouge)"
 			(at 54.61 107.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6104,7 +6478,7 @@
 				(justify bottom)
 			)
 		)
-		(property "Footprint" "MeshTag:LED_0402"
+		(property "Footprint" "MeshTag:LED_0402_Red_XL-1005SURC"
 			(at 54.61 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -6127,6 +6501,39 @@
 		)
 		(property "Description" ""
 			(at 54.61 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C25503345"
+			(at 54.61 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "XL-1005SURC"
+			(at 54.61 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XINGLIGHT"
+			(at 54.61 95.25 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6171,7 +6578,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "47pF 50V C0G"
 			(at 119.38 197.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6205,6 +6612,39 @@
 		)
 		(property "Description" ""
 			(at 119.38 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1567"
+			(at 119.38 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402CG470J500NT"
+			(at 119.38 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "FH (Guangdong Fenghua)"
+			(at 119.38 185.42 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6472,7 +6912,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "XL-1005UGC (vert)"
 			(at 69.85 107.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6483,7 +6923,7 @@
 				(justify bottom)
 			)
 		)
-		(property "Footprint" "MeshTag:LED_0402"
+		(property "Footprint" "MeshTag:LED_0402_Green_XL-1005UGC"
 			(at 69.85 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -6506,6 +6946,39 @@
 		)
 		(property "Description" ""
 			(at 69.85 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C965793"
+			(at 69.85 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "XL-1005UGC"
+			(at 69.85 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XINGLIGHT"
+			(at 69.85 95.25 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

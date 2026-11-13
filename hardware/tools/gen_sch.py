@@ -204,24 +204,53 @@ def main():
         "U1": "XIAO-nRF52840-SMD", "U2": "Wio-SX1262-Module", "AE1": "NFC_Coil_Round",
         "C1": "C_0402_1005Metric", "C2": "C_0402_1005Metric", "C3": "C_0402_1005Metric",
         "C4": "C_0402_1005Metric", "C5": "C_0402_1005Metric",
-        "SW1": "SW_Push_1P1T_NO_CK_KMR2", "SW3": "SW_SPDT_PCM12",
-        "BT1": "Batt_WirePads_2x", "J5": "Pogo_4P_2.54mm",
-        "D1": "LED_0402", "D2": "LED_0402", "R1": "R_0402", "R2": "R_0402",
+        "SW1": "SW_Push_1P1T-SH_NO_CK_KMR2xxG", "SW3": "SW_SPDT_PCM12",
+        "BT1": "Batt_WirePads_2x", "J5": "MagPogo_4P_P2.50mm_YZT0675",
+        "D1": "LED_0402_Red_XL-1005SURC", "D2": "LED_0402_Green_XL-1005UGC",
+        "R1": "R_0402", "R2": "R_0402",
         "TP1": "TestPoint_Pad_1.0x1.0mm", "TP2": "TestPoint_Pad_1.0x1.0mm",
         "TP3": "TestPoint_Pad_1.0x1.0mm", "TP4": "TestPoint_Pad_1.0x1.0mm",
         "TP5": "TestPoint_Pad_1.0x1.0mm", "TP6": "TestPoint_Pad_1.0x1.0mm",
     }
+    # Value + JLC assembly fields per reference (BOM/CPL for JLCPCB PCBA).
+    _lc = lambda lcsc, mpn, mfr: (("LCSC", lcsc), ("MPN", mpn), ("Manufacturer", mfr))
+    _dnp = lambda mpn: (("MPN", mpn), ("Manufacturer", "Seeed Studio"),
+                        ("JLC", "DNP - soudé à la main (non assemblé par JLC)"))
+    BOM = {
+        "C1": ("10uF 6.3V X5R", _lc("C15525", "CL05A106MQ5NUNC", "Samsung Electro-Mechanics")),
+        "C2": ("100nF 16V X7R", _lc("C1525", "CL05B104KO5NNNC", "Samsung Electro-Mechanics")),
+        "C5": ("100nF 16V X7R", _lc("C1525", "CL05B104KO5NNNC", "Samsung Electro-Mechanics")),
+        "C3": ("47pF 50V C0G", _lc("C1567", "0402CG470J500NT", "FH (Guangdong Fenghua)")),
+        "C4": ("47pF 50V C0G", _lc("C1567", "0402CG470J500NT", "FH (Guangdong Fenghua)")),
+        "R1": ("470R 1%", _lc("C25117", "0402WGF4700TCE", "UNI-ROYAL")),
+        "R2": ("470R 1%", _lc("C25117", "0402WGF4700TCE", "UNI-ROYAL")),
+        "D1": ("XL-1005SURC (rouge)", _lc("C25503345", "XL-1005SURC", "XINGLIGHT")),
+        "D2": ("XL-1005UGC (vert)", _lc("C965793", "XL-1005UGC", "XINGLIGHT")),
+        "SW1": ("KMR221GLFS", _lc("C72443", "KMR221GLFS", "C&K")),
+        "SW3": ("PCM12SMTR", _lc("C221841", "PCM12SMTR", "C&K")),
+        "J5": ("YZT0675-20048-04025-01",
+               _lc("C5126846", "YZT0675-20048-04025-01", "Xinyangze") +
+               (("Datasheet_URL", "https://www.lcsc.com/datasheet/lcsc_datasheet_2411220221_"
+                                  "Xinyangze-YZT0675-20048-04025-01_C5126846.pdf"),)),
+        "U1": ("XIAO-nRF52840-SMD", _dnp("102010448")),
+        "U2": ("Wio-SX1262", _dnp("114993390")),
+    }
     # symbol instances (Reference above, Value below — never over the pins)
     for ref, lib, x, y, uid in insts:
         fp = "MeshTag:" + FP[ref] if ref in FP else ""
+        value, fields = BOM.get(ref, (lib, ()))
+        extra = "".join(
+            '\t\t(property "%s" "%s" (at %s %s 0) (effects (font (size 1.27 1.27)) hide))\n'
+            % (k, v, x, y) for k, v in fields)
         P.append(
             '\t(symbol\n\t\t(lib_id "MeshTag:%s")\n\t\t(at %s %s 0)\n\t\t(unit 1)\n'
             '\t\t(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)\n\t\t(uuid "%s")\n'
             '\t\t(property "Reference" "%s" (at %s %s 0) (effects (font (size 1.27 1.27))))\n'
             '\t\t(property "Value" "%s" (at %s %s 0) (effects (font (size 1 1)) (justify bottom)))\n'
             '\t\t(property "Footprint" "%s" (at %s %s 0) (effects (font (size 1.27 1.27)) hide))\n'
+            '%s'
             '\t\t(instances (project "MeshTag" (path "/%s" (reference "%s") (unit 1))))\n\t)'
-            % (lib, x, y, uid, ref, x, y - 12, lib, x, y + 12, fp, x, y, proj_uuid, ref))
+            % (lib, x, y, uid, ref, x, y - 12, value, x, y + 12, fp, x, y, extra, proj_uuid, ref))
 
     # stub wires for dense parts
     for (ax, ay), (bx, by) in wires:

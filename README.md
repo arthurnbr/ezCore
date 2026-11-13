@@ -13,7 +13,8 @@ bi-couleur** de retour utilisateur, **port de charge/flash magnétique 4 points*
 
 Placement pensé usage, carte propre et symétrique :
 
-- **Pogo `J5` en haut** (VBUS/GND/D+/D−) : charge + flash UF2 + série USB.
+- **Pogo magnétique `J5` en haut** (VBUS/GND/D+/D−, type chargeur de montre) :
+  charge + flash UF2 + série USB.
 - **Bouton `SW1` + LED bi-couleur `D1`/`D2` à gauche** (90° du pogo) : retour
   visuel type AirPods (rouge = charge, vert = prêt, orange = transition). Pilotée
   par D9 (rouge) / D8 (vert) du XIAO via `R1`/`R2` (série).
@@ -61,26 +62,60 @@ meshtag/
     ├── lib/
     │   ├── MeshTag.kicad_sym  TOUS les symboles (projet autonome)
     │   ├── MeshTag.pretty/    TOUTES les empreintes (projet autonome)
-    │   └── 3dmodels/          modèles 3D STEP (XIAO, Wio, pogo, batterie)
+    │   └── 3dmodels/          modèles 3D STEP (constructeur / LCSC, alignés)
     ├── tools/
-    │   ├── gen_sch.py         génère le schéma lisible (blocs + stubs + notes)
+    │   ├── gen_sch.py         génère le schéma lisible (blocs + stubs + notes + champs BOM)
     │   ├── build_pcb.py       place les empreintes, dessine le contour, zones
-    │   └── route_pcb.sh       DSN → Freerouting → import SES → zones → DRC
+    │   ├── route_pcb.sh       DSN → Freerouting → import SES → zones → DRC
+    │   └── export_jlc.py      fichiers JLCPCB PCBA (gerbers zip, BOM, CPL)
     └── fab/
+        ├── jlc/               MeshTag_gerbers.zip + MeshTag_BOM_JLC.csv + MeshTag_CPL_JLC.csv
         ├── gerbers/           Gerbers + perçage (Protel + gbrjob)
         ├── schematic.png      rendu du schéma
         ├── render_3d_top.png  rendu 3D
-        └── BOM.csv
+        └── BOM.csv            BOM complète (valeurs, LCSC, MPN, fabricant)
 ```
 
 Toutes les bibliothèques (symboles, empreintes, **modèles 3D**) sont **copiées
-dans le projet** : rien ne dépend des bibliothèques système. Chaque empreinte de
-composant a un modèle 3D (STEP généré aux bonnes cotes pour XIAO / Wio / pogo /
-batterie, STEP KiCad standard pour les condensateurs et interrupteurs). Les
-empreintes sans 3D (bobine NFC, pastilles batterie, fiducials, test points) sont
-du cuivre/pads, sans pièce physique.
+dans le projet** (`${KIPRJMOD}/lib/3dmodels`) : rien ne dépend des bibliothèques
+système. Provenance des modèles 3D :
+
+| Empreinte | Modèle 3D | Source |
+|---|---|---|
+| `XIAO-nRF52840-SMD` | `XIAO-nRF52840-SMD.step` | STEP officiel Seeed (« XIAO-nRF52840 v3 », Printables Seeed Studio), recalé sur les pads 19–22 (écart < 0,01 mm) ; empreinte identique à la lib KiCad officielle Seeed `OPL_Kicad_Library` |
+| `Wio-SX1262-Module` | `Wio-SX1262-Module.step` | LCSC/EasyEDA C55348741, recalé sur le WRL EasyEDA (écart 0,03 mm) ; pads identiques à EasyEDA à ±0,02 mm |
+| `MagPogo_4P_P2.50mm_YZT0675` | `MagPogo_4P_P2.50mm_YZT0675.step` | LCSC/EasyEDA C5126846, recalé ; empreinte = EasyEDA + plan constructeur |
+| `SW_Push_1P1T-SH_NO_CK_KMR2xxG` | idem `.step` | lib KiCad officielle (KMR2 avec patte de masse, cf. fiche C&K) |
+| `SW_SPDT_PCM12` | idem `.step` | lib KiCad officielle (C&K PCM12) |
+| `C_0402_1005Metric`, `R_0402` | idem `.step` | lib KiCad officielle |
+| `LED_0402_Red_XL-1005SURC` / `LED_0402_Green_XL-1005UGC` | idem `.step` | LCSC/EasyEDA C25503345 / C965793, recalés |
+
+Les empreintes sans 3D (bobine NFC, pastilles batterie, fiducials, test points)
+sont du cuivre/pads, sans pièce physique.
 
 Pour régénérer le schéma : `python3 tools/gen_sch.py` (ERC 0/0).
+
+## Fabrication JLCPCB (PCBA)
+
+```bash
+cd hardware && python3 tools/export_jlc.py   # → fab/jlc/
+```
+
+JLC pose les **12 composants CMS/THT** du tableau ci-dessous ; **U1 (XIAO) et U2
+(Wio-SX1262) sont DNP** (marqués « Do Not Populate », hors BOM/CPL) et soudés à la
+main. Les champs `LCSC` / `MPN` / `Manufacturer` sont dans le schéma.
+
+| Réf | Valeur | LCSC | MPN | Type JLC |
+|---|---|---|---|---|
+| C1 | 10 µF 6,3 V X5R 0402 | C15525 | Samsung CL05A106MQ5NUNC | base |
+| C2, C5 | 100 nF 16 V X7R 0402 | C1525 | Samsung CL05B104KO5NNNC | base |
+| C3, C4 | 47 pF 50 V C0G 0402 (accord NFC, à confirmer au VNA) | C1567 | FH 0402CG470J500NT | base |
+| R1, R2 | 470 Ω 1 % 0402 | C25117 | UNI-ROYAL 0402WGF4700TCE | base |
+| D1 | LED rouge 0402 | C25503345 | XINGLIGHT XL-1005SURC | étendu |
+| D2 | LED verte 0402 | C965793 | XINGLIGHT XL-1005UGC | étendu |
+| SW1 | bouton KMR2 2 N | C72443 | C&K KMR221GLFS | étendu |
+| SW3 | interrupteur coulissant 0,3 A | C221841 | C&K PCM12SMTR | étendu |
+| J5 | réceptacle pogo magnétique 4P pas 2,5 mm | C5126846 | Xinyangze YZT0675-20048-04025-01 | étendu |
 
 ## Régénérer le PCB
 
@@ -161,7 +196,10 @@ pièces). La face avant porte aussi la **bobine NFC** (surface de tap). La
 - **Film ferrite 0,1 mm** entre la bobine et la batterie : **obligatoire**. Le PCB
   (FR4) est transparent au champ magnétique et ne protège pas ; sans ferrite,
   l'enveloppe aluminium de la batterie absorbe le champ et tue le NFC. ~2 €.
-- **Port pogo `J5`** (VBUS/GND/D+/D−) : charge + flash UF2 + série USB.
+- **Port pogo magnétique `J5`** (Xinyangze YZT0675, 4P pas 2,50 mm, contacts plats +
+  2 aimants) : VBUS/GND/D+/D− → charge + flash UF2 + série USB. Le câble doit être
+  un **mâle à ressorts 4P au pas de 2,5 mm** avec le **même ordre de broches** et
+  des aimants de polarité opposée (sinon VBUS/GND s'inversent).
 - **USB-C du XIAO** non exposé ; dessoudage optionnel pour gagner de la hauteur.
   Les pogo D+/D− se câblent alors sur les pads USB du XIAO (`TP5`/`TP6`).
 
