@@ -36,6 +36,7 @@ REFFP = {
     "TP1": "TestPoint_Pad_1.0x1.0mm", "TP2": "TestPoint_Pad_1.0x1.0mm",
     "TP3": "TestPoint_Pad_1.0x1.0mm", "TP4": "TestPoint_Pad_1.0x1.0mm",
     "TP5": "TestPoint_Pad_1.0x1.0mm", "TP6": "TestPoint_Pad_1.0x1.0mm",
+    "FID1": "Fiducial_Align_1.5mm", "FID2": "Fiducial_Align_1.5mm", "FID3": "Fiducial_Align_1.5mm",
 }
 # placement by body centre, in board-centre-relative mm: (dx, dy, rot, back_side)
 # +x right, +y down. Centre of board is (0,0).
@@ -58,6 +59,9 @@ PLACE = {
     "TP4": (14.14, -14.14, 0, True),
     "TP5": (-6.84, -18.79, 0, True),
     "TP6": (6.84, -18.79, 0, True),
+    "FID1": (-18.19, 10.5, 0, False),
+    "FID2": (18.19, 10.5, 0, False),
+    "FID3": (0.0, -21.0, 0, False),
 }
 
 

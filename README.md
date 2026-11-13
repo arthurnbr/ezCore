@@ -130,4 +130,24 @@ dans KiCad, en passant par la face arrière là où le plan GND laisse la place.
   accepté par les fabricants (ponts de masque tolérés sur ce module).
 - Antenne LoRa, batterie et boîtier : voir `docs/bom_v2.md`.
 
+## Fabrication maison (photogravure UV, double face)
+
+Règles de conception adaptées à la **photogravure UV maison**, pas à un fab pro :
+
+| Paramètre | Valeur |
+|---|---|
+| Couches | 2 (F.Cu + B.Cu uniquement) |
+| Largeur de piste | **0,3 mm** |
+| Isolation | **0,3 mm** |
+| Vias | **⌀1,0 mm pad / perçage 0,6 mm** — métallisés à la main (rivet ou fil soudé des deux côtés) |
+| Calage recto-verso | 3 repères `FID1/2/3` (trous ⌀0,6) en triangle : percer puis aligner les deux films dessus |
+
+**Procédure vias maison** : chaque via se perce à 0,6 mm puis se métallise avec un
+rivet à œillet ou un bout de fil soudé sur les deux faces. Il faut donc router en
+gardant les vias **hors des composants** (soudables des deux côtés).
+
+> ⚠️ **Via central de la bobine NFC** : il tombe sous le XIAO. Le riveter/souder
+> **avant** de poser le XIAO, ou déplacer la bobine `AE1` dans la zone libre en bas
+> du disque si l'accès est requis après assemblage.
+
 # ezCore
