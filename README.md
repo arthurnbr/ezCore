@@ -1,13 +1,33 @@
-# MeshTag — porte-clés compagnon MeshCore
+# ezCore — porte-clés compagnon MeshCore (V2, circulaire)
 
-Compagnon MeshCore ultra-compact (format porte-clés) construit autour du
-**Seeed XIAO nRF52840** + module LoRa **Wio-SX1262** (EU868), avec appairage BLE
-sans code, mise à jour OTA par application, antenne NFC intégrée pour l'appairage
-par approche, et gestion de la batterie sur la carte.
+Compagnon MeshCore ultra-compact en **disque Ø48 mm** (type AirTag, en plus gros)
+construit autour du **Seeed XIAO nRF52840** + module LoRa **Wio-SX1262** (EU868) :
+appairage BLE sans code, mise à jour OTA par application, **antenne NFC ronde
+intégrée** pour l'appairage par approche, **port de charge/flash magnétique 4
+points** (pogo), et batterie **1000 mAh** gérée sur la carte.
 
-> État : la PCB est **générée par script** et routée automatiquement. L'ERC passe
-> (0/0). La DRC a quelques points cosmétiques à finir à la main dans KiCad (voir
-> « Limitations connues »). Tout est reproductible via les scripts de `hardware/tools/`.
+> État : PCB **générée par script** et routée (Freerouting). ERC 0/0. Quelques
+> points DRC cosmétiques à finir dans KiCad (voir « Limitations connues »). Tout
+> est reproductible via `hardware/tools/`.
+
+## Nouveautés V2 (vs V1 rectangulaire 26 × 52)
+
+- **Forme circulaire Ø48 mm** + oreille porte-clés dédiée (trou NPTH, plus à
+  travers la carte).
+- **Module Wio-SX1262** placé en bord de disque, IPEX vers le pourtour :
+  l'**antenne LoRa FPC s'enroule sur la paroi intérieure** du boîtier (~270°),
+  à l'opposé de l'oreille et de l'antenne BLE du XIAO.
+- **Port pogo 4 points** (`J5` = VBUS / GND / D+ / D−) : charge **et** flash UF2
+  **et** série USB par le même connecteur magnétique, sans ouvrir le boîtier.
+- **USB-C du XIAO non exposé** ; peut être **dessoudé** pour gagner de la place
+  (le pogo fournit VBUS + D+/D− → le bootloader UF2 et l'OTA marchent quand même).
+- **Batterie LPR604543** ronde Ø45 × 6 mm, 1050 mAh, PCM (keep-out circulaire sous
+  la PCB).
+- **Bobine NFC ronde** (Ø28, net-tie) centrée sous le XIAO.
+- **Pas de pull-up SPI** : confirmé par le schéma Seeed de la carte d'extension
+  (ses 3 résistances servent au connecteur 30-pin, à la LED et au bouton — pas au
+  bus SPI du SX1262). Seul un **100 nF** (`C5`) de découplage est ajouté au VCC
+  du module.
 
 ## Arborescence
 
@@ -18,7 +38,7 @@ meshtag/
 └── hardware/
     ├── MeshTag.kicad_pro      projet KiCad 9
     ├── MeshTag.kicad_sch      schéma (généré)
-    ├── MeshTag.kicad_pcb      PCB 2 couches 26 × 52 mm (généré + routé)
+    ├── MeshTag.kicad_pcb      PCB 2 couches, disque Ø48 mm (généré + routé)
     ├── MeshTag.net            netlist exportée
     ├── MeshTag.kicad_dru      règles DRC (exemption net-tie bobine NFC)
     ├── sym-lib-table          → lib/MeshTag.kicad_sym (locale)
@@ -81,18 +101,33 @@ Wio (FPC 868 MHz, voir `docs/`).
 
 ## Accord de la bobine NFC
 
-Bobine rectangulaire 5 tours/couche, ~1,5–2 µH estimés. **La valeur exacte doit
-être mesurée au NanoVNA** puis les condensateurs C3/C4 choisis entre 33 et 150 pF
-(C0G 0402) pour résonner à 13,56 MHz — procédure standard (wiki Seeed XIAO NFC).
+Bobine **ronde** 6 tours/couche (Ø15 mm), ~1,5–2 µH estimés, centrée sous le XIAO.
+**La valeur exacte doit être mesurée au NanoVNA** puis les condensateurs C3/C4
+choisis entre 33 et 150 pF (C0G 0402) pour résonner à 13,56 MHz — procédure
+standard (wiki Seeed XIAO NFC).
+
+## Alimentation et charge
+
+- **Batterie** : LPR604543 ronde Ø45 × 6 mm, 1050 mAh, PCM (fils soudés sur les
+  pastilles `BT1` BAT+/BAT−). Le chargeur BQ25101 du XIAO charge à 50/100 mA.
+- **Port pogo `J5`** (VBUS/GND/D+/D−) : charge + flash UF2 + série USB.
+- **USB-C du XIAO** non exposé ; dessoudage optionnel pour gagner de la hauteur.
+  Les pogo D+/D− se câblent alors sur les pads USB du XIAO (`TP5`/`TP6`).
+
+## État du routage (à finir dans la GUI KiCad)
+
+Le disque est **placé** (0 conflit de pastilles), les plans GND coulés, mais
+l'auto-routeur ne boucle pas tout sur 2 couches à cette densité. **~13 liaisons
+courtes restent à tirer à la main** (SPI LoRa U1↔U2, NFC, VBATT, RST) — ~15 min
+dans KiCad, en passant par la face arrière là où le plan GND laisse la place.
 
 ## Limitations connues (à finir dans la GUI KiCad)
 
-- **Trou porte-clés** : laissé en cercle Edge.Cuts ; à transformer en trou NPTH
-  propre (il génère quelques `copper_edge_clearance`).
+- **~13 nets non routés** (voir ci-dessus) : SPI LoRa, NFC1/NFC2, VBATT, RST_MCU.
 - **Ratsnest bobine NFC** : la spirale est du cuivre d'empreinte (net-tie) ;
-  KiCad la signale « non connectée » dans le ratsnest alors qu'elle est
-  physiquement continue. À relier par un petit via/segment en GUI si besoin.
-- **1 `starved_thermal`** sur une pastille GND (une seule branche thermique).
-- Antenne LoRa, batterie et boîtier : voir `docs/` et la BOM de sourcing.
+  KiCad peut la signaler « non connectée » alors qu'elle est physiquement continue.
+- **`solder_mask_bridge`** entre pastilles castellées serrées du XIAO : cosmétique,
+  accepté par les fabricants (ponts de masque tolérés sur ce module).
+- Antenne LoRa, batterie et boîtier : voir `docs/bom_v2.md`.
 
 # ezCore
