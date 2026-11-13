@@ -94,3 +94,5 @@ Bobine rectangulaire 5 tours/couche, ~1,5–2 µH estimés. **La valeur exacte d
   physiquement continue. À relier par un petit via/segment en GUI si besoin.
 - **1 `starved_thermal`** sur une pastille GND (une seule branche thermique).
 - Antenne LoRa, batterie et boîtier : voir `docs/` et la BOM de sourcing.
+
+# ezCore
